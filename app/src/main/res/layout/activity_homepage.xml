@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Homepage">
+
+
+    <ImageView
+        android:id="@+id/deco"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:background="@drawable/book6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"></ImageView>
+
+
+
+    <Button
+        android:id="@+id/addbook"
+        android:layout_below="@id/deco"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="add bookS"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@color/white"
+        ></Button>
+
+
+    <Button
+        android:id="@+id/deletebook"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/deco"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="0dp"
+        android:layout_toEndOf="@+id/addbook"
+        android:layout_toRightOf="@+id/addbook"
+        android:background="@color/white"
+        android:text="DELETE BOOKS"
+        android:textColor="@color/black"
+        android:textSize="20dp"></Button>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/searchbook"
+        android:layout_below="@id/addbook"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="SEARCH bookS"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@color/white"
+        ></Button>
+
+
+
+
+
+
+
+</RelativeLayout>

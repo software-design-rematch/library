@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".createAccount">
+
+
+    <EditText
+        android:id="@+id/names"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="58dp"
+        android:hint="first name(s)"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_name"
+
+        android:textSize="20dp"></EditText>
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/names"
+        android:layout_marginTop="20dp"
+        android:hint="surname"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_name"
+        android:textSize="20dp"></EditText>
+
+    <EditText
+        android:id="@+id/emailA"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/surname"
+        android:layout_marginTop="19dp"
+        android:hint="email address"
+        android:drawableLeft="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"></EditText>
+
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/emailA"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textSize="20dp"></EditText>
+
+    <EditText
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/pass"
+        android:inputType="textPassword"
+        android:password="true"
+        android:drawableLeft="@drawable/ic_lock"
+        android:hint="confirm password"
+        ></EditText>
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/confirm"
+
+
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+
+            android:id="@+id/male"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:onClick="dogen"
+            />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:onClick="dogen"
+
+            />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/createA"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:text="sign up"
+        tools:ignore="UnknownId"></Button>
+
+
+    <TextView
+        android:id="@+id/loginini"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/radiogroup"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="-4dp"
+        android:scrollbarSize="20dp"
+        android:textColor="#009"
+        android:text="or    SIGN IN"
+        android:layout_marginRight="-4dp"
+        android:background="@color/white"
+        android:textAlignment="center"
+        tools:ignore="InvalidId"
+        android:gravity="center_horizontal"></TextView>
+
+
+</RelativeLayout>
