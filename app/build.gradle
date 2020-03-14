@@ -14,15 +14,33 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+   lintOptions {
+        abortOnError false
+    }
     buildTypes {
         release {
+            testCoverageEnabled false
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug
+                {
+                    testCoverageEnabled true
+                }
     }
+    testOptions {
 
+        unitTests.all {
+
+            jacoco {
+                includeNoLocationClasses = true
+
+            }
+
+        }
+
+    }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -34,3 +52,34 @@ dependencies {
     implementation 'me.dm7.barcodescanner:zxing:1.9'
 
 }
+
+
+
+jacoco {
+    version = '0.8.0'
+}
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+}
+
+task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+    def debugTree = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
+    def mainSrc = "$project.projectDir/src/main/java"
+
+    sourceDirectories = files([mainSrc])
+    classDirectories = files([debugTree])
+    executionData = fileTree(dir: project.buildDir, includes: [
+            'jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/**/*.ec'
+    ])
+}
+
+
+
+
