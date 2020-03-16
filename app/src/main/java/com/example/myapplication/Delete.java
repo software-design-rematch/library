@@ -53,9 +53,6 @@ public class Delete extends AppCompatActivity  implements View.OnClickListener{
 
 
 
-
-
-
             if(v.equals(deleteeboook)){
                 String adress = "http://146.141.21.235/deletebook.php";
                 ContentValues Content = new ContentValues();
