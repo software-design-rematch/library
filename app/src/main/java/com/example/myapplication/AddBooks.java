@@ -21,8 +21,6 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
     String code="";
     EditText nameofbook,shelfname,authorname;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
