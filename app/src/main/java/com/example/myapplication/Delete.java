@@ -102,8 +102,5 @@ public class Delete extends AppCompatActivity  implements View.OnClickListener{
 
 
 
-
-
-
     }
 }
