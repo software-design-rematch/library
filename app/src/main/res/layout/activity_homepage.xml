@@ -25,60 +25,43 @@
         android:layout_marginRight="82dp"></ImageView>
 
 
-
     <Button
         android:id="@+id/addbook"
-        android:layout_below="@id/deco"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="add bookS"
+        android:layout_below="@id/deco"
         android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:background="@color/white"
-        ></Button>
 
+        android:background="@color/white"
+        android:text="add bookS"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/deletebook"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/deco"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="0dp"
-        android:layout_toEndOf="@+id/addbook"
-        android:layout_toRightOf="@+id/addbook"
+        android:layout_below="@id/addbook"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
         android:text="DELETE BOOKS"
         android:textColor="@color/black"
         android:textSize="20dp"></Button>
 
-
-
-
-
-
     <Button
         android:id="@+id/searchbook"
-        android:layout_below="@id/addbook"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="SEARCH bookS"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:layout_below="@id/deletebook"
+
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@color/white"
-        ></Button>
-
-
-
-
-
+        android:text="SEARCH bookS"
+        android:textColor="@color/black"
+        android:textSize="20dp"></Button>
 
 
 </RelativeLayout>

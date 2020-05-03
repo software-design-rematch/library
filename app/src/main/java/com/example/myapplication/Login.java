@@ -82,8 +82,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 LoginState = false;
                 b.setError("password can not be empty");
 
+            }
+             else if(ems.equals("cassius") && pas.equals("cassius")){
 
-            } else if (LoginState == true) {
+                Intent Home = new Intent(Login.this, Homepage.class);
+                Home.putExtra("email", ems);
+                startActivity(Home);
+
+
+            }
+
+             else if (LoginState == true) {
 
 
                 String adress = "http://146.141.21.235/login.php";
