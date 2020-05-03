@@ -18,14 +18,12 @@ public class LoginTest {
     @Rule
     public ActivityTestRule<Login> activityTestRule = new ActivityTestRule<>(Login.class);
 
-
-
     @Test
     public void tryLoginAsStudent(){
         try {
             runOnUiThread(() -> {
                 activityTestRule.getActivity().findViewById(R.id.signin).performClick();
-                activityTestRule.getActivity().a.setText("1627982");
+                activityTestRule.getActivity().a.setText("cassius123");
                 activityTestRule.getActivity().b.setText("wrong pass");
                 activityTestRule.getActivity().findViewById(R.id.signin).performClick();
             });
@@ -33,7 +31,4 @@ public class LoginTest {
             throwable.printStackTrace();
         }
     }
-
-
-
 }
