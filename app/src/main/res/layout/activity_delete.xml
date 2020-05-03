@@ -6,14 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Delete">
-
-
     <Button
         android:id="@+id/scancode"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-
         android:layout_marginTop="250dp"
         android:background="@color/white"
 
