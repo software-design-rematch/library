@@ -9,11 +9,6 @@
 
 
 
-
-
-
-
-
     <Button
         android:layout_marginTop="100dp"
         android:id="@+id/scancode"
@@ -129,15 +124,6 @@
         android:layout_marginRight="70dp"
         android:background="@color/white"
         android:text="add book"></Button>
-
-
-
-
-
-
-
-
-
 
 
 </RelativeLayout>
