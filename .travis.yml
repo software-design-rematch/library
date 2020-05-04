@@ -1,38 +1,31 @@
-sudo: false
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-language: android
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.1'
+	classpath 'org.jacoco:org.jacoco.core:0.8.0'
+	
+        
 
-env:
-  global:
-    - ANDROID_TARGET=android-22
-    - ANDROID_ABI=armeabi-v7a
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
 
-android:
-  components:
-  - tools #
-  - tools
-  - platform-tools
-  - build-tools-28.0.3
-  - android-26
-  - add-on
-  - extra
-  - $ANDROID_TARGET
-  - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
 
-licenses:
-- 'android-sdk-license-.+'
-
-before_install:
-  - yes | sdkmanager "platforms;android-27"
-
-script:
-  - ./gradlew build jacocoTestReport
-  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-  - emulator -avd test -no-skin -no-audio -no-window &
-  - android-wait-for-emulator
-  - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
-  - ./gradlew connectedCheck
-
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
