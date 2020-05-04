@@ -28,21 +28,6 @@ public class createAccountTest {
 
 
 
-    @Test
-    public void generatedUI(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.createA).performClick();
-
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-
-
 
 
 }
