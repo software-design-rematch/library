@@ -9,16 +9,12 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
-	    classpath 'org.jacoco:org.jacoco.core:0.8.0'
+	classpath 'org.jacoco:org.jacoco.core:0.8.0'
 	
         
 
         // NOTE: Do not place your application dependencies here; they belong
-<<<<<<< HEAD
-
-=======
         // in the individual module build.gradle files
->>>>>>> 17066c436eb55ad4087a0f4e9c59f50bdb4b905d
     }
 }
 
