@@ -24,6 +24,8 @@ licenses:
 
 before_install:
   - yes | sdkmanager "platforms;android-27"
+before script:
+  - chmod +x gradlew
 
 script:
   - ./gradlew build jacocoTestReport
