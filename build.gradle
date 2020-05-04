@@ -15,10 +15,6 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-<<<<<<< HEAD
-
-=======
->>>>>>> 4565a3597b4d70d45e3c28f82a428eacbe6471fc
     }
 }
 
