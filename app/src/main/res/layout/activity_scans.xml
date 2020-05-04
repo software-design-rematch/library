@@ -18,7 +18,4 @@
         android:onClick="scancode"
         android:text="scan ISBN "
         android:textColor="@color/black"></Button>
-
-
-
 </RelativeLayout>
