@@ -33,12 +33,7 @@ public class createAccountTest {
         try {
             runOnUiThread(() -> {
                 activityTestRule.getActivity().findViewById(R.id.createA).performClick();
-                activityTestRule.getActivity().a.setText("cassius123");
-                activityTestRule.getActivity().b.setText("thangza");
-                activityTestRule.getActivity().c.setText("cassius@gmail.com");
-                activityTestRule.getActivity().d.setText("matsea");
-                activityTestRule.getActivity().e.setText("matsea");
-                activityTestRule.getActivity().findViewById(R.id.createA).performClick();
+
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
