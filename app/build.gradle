@@ -1,19 +1,10 @@
 apply plugin: 'com.android.application'
-<<<<<<< HEAD
 apply plugin: 'jacoco-android'
-=======
-apply plugin: 'jacoco'
->>>>>>> 8610872466ad406ffd5d75ee689a4273ad91c730
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8610872466ad406ffd5d75ee689a4273ad91c730
-    testOptions {
+testOptions {
         animationsDisabled = true
         unitTests.returnDefaultValues = true
         unitTests.all{
@@ -45,22 +36,14 @@ android {
         debug
                 {
                     testCoverageEnabled true
-<<<<<<< HEAD
                     debuggable true
-=======
-			    debuggable true
->>>>>>> 8610872466ad406ffd5d75ee689a4273ad91c730
                 }
     }
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 8610872466ad406ffd5d75ee689a4273ad91c730
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
