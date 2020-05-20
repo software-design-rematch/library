@@ -19,11 +19,27 @@
 
 
 
+    <EditText
+        android:id="@+id/typeinisbn"
+        android:layout_below="@id/scancode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="type in isbn"
+        android:textColor="@color/black"
+
+        ></EditText>
+
+
+
+
+
+
+
     <Button
         android:id="@+id/deletebooks"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@id/scancode"
+        android:layout_below="@id/typeinisbn"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -35,6 +51,24 @@
         android:layout_marginRight="141dp"
         android:background="@color/white"
         android:text="delete book"></Button>
+
+
+
+
+    <Button
+        android:id="@+id/backk"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/deletebooks"
+        android:background="@color/white"
+        android:text="BACK"
+        android:textSize="20dp"
+
+
+        ></Button>
+
+
 
 
 </RelativeLayout>

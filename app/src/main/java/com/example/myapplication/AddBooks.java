@@ -17,8 +17,11 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
     String srcc="";
     TextView isbnd;
     private static  String res="ggg";
-    Button p,nxt,sc,ems;
+    Button p,nxt,sc,ems,bk;
     String code="";
+
+    String fttt="a";
+
     EditText nameofbook,shelfname,authorname;
 
     @Override
@@ -29,7 +32,7 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
         getSupportActionBar().setTitle("ADD BOOKS");
 
 
-
+        bk=(Button)findViewById(R.id.back);
         isbnd =(TextView)findViewById(R.id.isbnn);
         shelfname=(EditText)findViewById(R.id.booklocation);
         authorname=(EditText)findViewById(R.id.author);
@@ -40,18 +43,35 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
         sc =(Button)findViewById(R.id.scancode);
 
 
-        Intent intent =getIntent();
-        srcc =intent.getStringExtra("ISBN");
+
+        //here for scan
+         //Intent intent =getIntent();
+        //srcc =intent.getStringExtra("ISBN");
+
+
+
 
         Intent intent1 =getIntent();
         emss =intent1.getStringExtra("email");
-        Intent intent2 =getIntent();
-        e=intent2.getStringExtra("emaial");
+
+
+
+
+
+        //here for scans
+        //Intent intent2 =getIntent();
+        //e=intent2.getStringExtra("emaial");
+
+
+
+
+
+
         //b = intent.getExtras();
         nxt.setOnClickListener(this);
         sc.setOnClickListener(this);
         p.setOnClickListener(this);
-
+        bk.setOnClickListener(this);
 
 
 
@@ -59,6 +79,18 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
+
+
+        if(view.equals(bk)){
+
+            Intent intent = new Intent(AddBooks.this, Homepage.class);
+            intent.putExtra("email",emss);
+            startActivity(intent);
+
+
+        }
+
+
 
 
         if (view.equals(sc)) {
@@ -79,15 +111,20 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
             String nameAUTHOR = authorname.getText().toString();
 
 
+
+
             boolean stated = true;
 
 
-            if (srcc.equals("")) {
+            //here for scan
+            /*if (srcc.equals("")) {
                 isbnd.setError("scan isbn code");
                 stated = false;
-            }
+            }*/
+
+
             if (namebook.equals("")) {
-                nameofbook.setError("book name can not be empty");
+                nameofbook.setError("book name and ISBN can not be empty");
                 stated = false;
             }
             if (nameSHELF.equals("")) {
@@ -101,16 +138,34 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
             } else if (stated == true) {
 
 
+                String bookcodeandisbn[] =namebook.split(",");
+
+                String bookksname =bookcodeandisbn[0];
+                String ISBNCODEFINAL=bookcodeandisbn[1];
+
+                if(ISBNCODEFINAL.equals("")) {ISBNCODEFINAL = fttt;}
+
+
                 String type = "reg";
                 bookinfobackground backgroundTask = new bookinfobackground(getApplicationContext(),"");
-                backgroundTask.execute(type, srcc, namebook, nameAUTHOR, nameSHELF,e);
+                //ND ,if you scan,remove emss by e
+                backgroundTask.execute(type, ISBNCODEFINAL, bookksname, nameAUTHOR, nameSHELF,emss);
                 nameofbook.setText("");
                 shelfname.setText("");
                 authorname.setText("");
-                isbnd.setText("");
+
+
+
+                //scans here.....
+                //isbnd.setText("");
+
+
+
+
 
                 Intent intent = new Intent(AddBooks.this,Homepage.class);
-                intent.putExtra("email",e);
+                //ND ,if you scan,remove emss by e
+                intent.putExtra("email",emss);
                 startActivity(intent);
 
 

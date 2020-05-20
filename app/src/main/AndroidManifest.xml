@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Deletescan"></activity>
+        <activity android:name=".rreturnbooks"></activity>
+        <activity android:name=".Issuebook" />
+        <activity android:name=".searchbooksss" />
+        <activity android:name=".Deletescan" />
         <activity android:name=".Delete" />
         <activity android:name=".Scans" />
         <activity android:name=".AddBooks" />

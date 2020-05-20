@@ -20,7 +20,6 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="79dp"
         android:layout_marginLeft="79dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="82dp"
         android:layout_marginRight="82dp"></ImageView>
 
@@ -62,6 +61,30 @@
         android:text="SEARCH bookS"
         android:textColor="@color/black"
         android:textSize="20dp"></Button>
+
+
+    <Button
+        android:id="@+id/isuebook"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/searchbook"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:text="issue book"></Button>
+
+    <Button
+        android:id="@+id/returnbook"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/searchbook"
+        android:background="@color/white"
+        android:text="return book"
+        android:layout_alignParentRight="true"
+        ></Button>
+
+
 
 
 </RelativeLayout>

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
-    Button ad,deletebook;
+    Button ad,deletebook,SBOOK,IBOOK,RBOOK;
     String ems;
 
     @Override
@@ -19,20 +19,34 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         getSupportActionBar().setTitle("LIBRARY");
         deletebook=(Button)findViewById(R.id.deletebook);
         ad =(Button)findViewById(R.id.addbook);
-
+        SBOOK=(Button)findViewById(R.id.searchbook);
+        IBOOK=(Button)findViewById(R.id.isuebook);
+        RBOOK=(Button)findViewById(R.id.returnbook);
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
 
 
         ad.setOnClickListener(this);
         deletebook.setOnClickListener(this);
-
-
+        SBOOK.setOnClickListener(this);
+        IBOOK.setOnClickListener(this);
+        RBOOK.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
+
+
+
+
+        if(v.equals(RBOOK)){
+            Intent intent = new Intent(Homepage.this,rreturnbooks.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+
+
+        }
 
 
 
@@ -49,13 +63,30 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         if(v.equals(deletebook)){
             Intent intent = new Intent(Homepage.this,Delete.class);
-            //intent.putExtra("email",ems);
+            intent.putExtra("email",ems);
             startActivity(intent);
 
 
         }
 
 
+        if(v.equals(SBOOK)){
+
+            Intent intent = new Intent(Homepage.this,searchbooksss.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+
+
+        }
+
+
+        if(v.equals(IBOOK)){
+            Intent intent = new Intent(Homepage.this,Issuebook.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+
+
+        }
 
 
 
