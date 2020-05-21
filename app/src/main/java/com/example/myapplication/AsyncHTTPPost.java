@@ -17,7 +17,7 @@ import java.net.URL;
 
 
 
-public abstract class AsyncHTTPPost extends AsyncTask<String, String,
+public  abstract class AsyncHTTPPost extends AsyncTask<String, String,
 
 
         String> {

@@ -94,35 +94,15 @@ public class Delete extends AppCompatActivity  implements View.OnClickListener{
 
 
              else if(st==true){
-                String adress = "http://146.141.21.235/deletebook.php";
-                ContentValues Content = new ContentValues();
-                //remove cBOOK by "isbnbook" if you do the scan
-                Content.put("ISBN", cBOOK);
+                 String type= "reg";
 
 
-                AsyncHTTPPost ident = new AsyncHTTPPost(adress, Content) {
-                    @Override
-                    protected void onPostExecute(String output) {
-                        System.out.println(output);
-                        if (output.equals("true")) {
-                            Toast.makeText(getApplicationContext(), "book deleted successful", Toast.LENGTH_LONG).show();
-                            Intent Home = new Intent(Delete.this, Homepage.class);
-                            //Home.putExtra("name", ems);
-                            startActivity(Home);
-                        } else if (output.equals("false")) {
-
-                            Toast.makeText(getApplicationContext(), "book not deleted,scan book code", Toast.LENGTH_LONG).show();
-
-                        } else if (output.equals("0")) {
-                            Toast.makeText(getApplicationContext(), "book code(isbn) does not exist", Toast.LENGTH_LONG).show();
-                            Intent Home = new Intent(Delete.this, Homepage.class);
-                            //Home.putExtra("name", ems);
-                            startActivity(Home);
-                        }
-                    }
-                };
-                ident.execute();
-
+                 Backdeletebook backgroundTask = new Backdeletebook(getApplicationContext(),"");
+                 backgroundTask.execute(type,cBOOK);
+                 as.setText("");
+                 Intent intentx = new Intent(Delete.this,Homepage.class);
+                 intentx.putExtra("email",ems);
+                 startActivity(intentx);
 
             }
 

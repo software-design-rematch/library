@@ -33,7 +33,7 @@ protected String doInBackground(String... strings) {
     String email = strings[3];
     String gender = strings[4];
     String password = strings[5];
-    String regURL = "http://146.141.21.235/reg.php";
+    String regURL = "http://192.168.43.68/reg.php";
     if (type.equals("reg")) {
         try {
             URL url = new URL(regURL);

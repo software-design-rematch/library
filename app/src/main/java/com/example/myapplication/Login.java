@@ -95,7 +95,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
              else if (LoginState == true) {
 
 
-                String adress = "http://146.141.21.235/login.php";
+                String adress = "http://192.168.43.68/login.php";
                 ContentValues Content = new ContentValues();
                 Content.put("email", ems);
                 Content.put("password", pas);
