@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Homepage">
+    >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
 
+            >
     <ImageView
         android:id="@+id/deco"
         android:layout_width="300dp"
@@ -87,4 +99,99 @@
 
 
 
-</RelativeLayout>
+
+            <View
+                android:layout_marginTop="20dp"
+                android:id="@+id/pr"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
+                android:layout_below="@id/returnbook"
+                ></View>
+
+            <View
+                android:layout_marginTop="20dp"
+                android:id="@+id/pro"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
+                android:layout_below="@id/pr"
+                ></View>
+
+
+            <View
+                android:layout_marginTop="20dp"
+                android:id="@+id/prr"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
+                android:layout_below="@id/pro"
+                ></View>
+
+
+
+
+
+            <Button
+                android:id="@+id/userprofile"
+                android:layout_below="@id/prr"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/white"
+                android:text="PROFILE"
+
+                ></Button>
+
+
+
+            <Button
+                android:id="@+id/userhistroy"
+                android:layout_below="@id/prr"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:text="HISTORY"
+
+                ></Button>
+
+
+
+            <Button
+                android:id="@+id/userchat"
+                android:layout_below="@id/userprofile"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/white"
+                android:text="CHATS"
+
+                ></Button>
+
+
+
+            <Button
+                android:id="@+id/userwishlist"
+                android:layout_below="@id/userhistroy"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:text="WISHLIST"
+
+                ></Button>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>L>
+
+
+</ScrollView>

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".rreturnbooks"></activity>
+        <activity android:name=".Userprofile"></activity>
+        <activity android:name=".rreturnbooks" />
         <activity android:name=".Issuebook" />
         <activity android:name=".searchbooksss" />
         <activity android:name=".Deletescan" />
