@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class Issuebook extends AppCompatActivity implements View.OnClickListener {
     EditText a;
@@ -52,6 +55,23 @@ public class Issuebook extends AppCompatActivity implements View.OnClickListener
             }
 
             else if(state == true){
+
+
+
+                String  mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+
+                String type ="reg";
+                Backloanbook backgroundTask = new Backloanbook(getApplicationContext(),"");
+                backgroundTask.execute(type, ems, isbnnn , "taken",mydate);
+
+                a.setText("");
+                Intent intent = new Intent(Issuebook.this,Homepage.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
+
+
+
+
 
 
                 //check if book exist and is free then add it to issue book database;

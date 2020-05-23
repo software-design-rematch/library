@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Calendar;
+
 public class rreturnbooks extends AppCompatActivity implements View.OnClickListener {
 
     String ems;
@@ -56,6 +58,19 @@ public class rreturnbooks extends AppCompatActivity implements View.OnClickListe
             }
 
             else if(state == true) {
+
+
+                String  mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+
+
+                String type ="reg";
+                Backreturnbook backgroundTask = new Backreturnbook(getApplicationContext(),"");
+                backgroundTask.execute(type, ems, isbnnn , mydate);
+
+                a.setText("");
+                Intent intent = new Intent(rreturnbooks.this,Homepage.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
 
 
                 //check if book exist and was taken by the user who wants to return it then it from issue book database;
