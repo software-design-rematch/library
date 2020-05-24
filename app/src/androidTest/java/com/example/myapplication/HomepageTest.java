@@ -57,6 +57,100 @@ public class HomepageTest {
 
 
 
+    @Test
+    public void justtrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.isuebook).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+    @Test
+    public void justttrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.returnbook).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+    @Test
+    public void jjustrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userprofile).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+    @Test
+    public void ajustrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userhistroy).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+
+    @Test
+    public void jutrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userchat).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+    @Test
+    public void jusunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userwishlist).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
 
 
 }
