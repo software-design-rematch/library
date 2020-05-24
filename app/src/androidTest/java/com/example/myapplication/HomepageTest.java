@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.widget.Button;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
@@ -56,6 +58,18 @@ public class HomepageTest {
     }
 
 
+
+    @Test
+    public void checkissue() throws Throwable{
+
+
+
+        runOnUiThread(() -> {
+            activityTestRule.getActivity().findViewById(R.id.isuebook).performClick();
+
+        });
+
+    }
 
 
 
