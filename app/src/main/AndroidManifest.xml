@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Userprofile"></activity>
+        <activity android:name=".chating"></activity>
+        <activity android:name=".Userhistrory" />
+        <activity android:name=".Userprofile" />
         <activity android:name=".rreturnbooks" />
         <activity android:name=".Issuebook" />
         <activity android:name=".searchbooksss" />
