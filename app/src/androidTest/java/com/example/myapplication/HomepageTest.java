@@ -56,19 +56,7 @@ public class HomepageTest {
     }
 
 
- @Test
-    public  void kixc(){
 
-     try {
-         runOnUiThread(() -> {
-             activityTestRule.getActivity().findViewById(R.id.isuebook).performClick();
-
-         });
-     } catch (Throwable throwable) {
-         throwable.printStackTrace();
-     }
-
- }
 
 
 }
