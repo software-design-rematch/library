@@ -72,7 +72,7 @@ public class HomepageTest {
 
 
 
-    @Test
+  /*  @Test
     public void justttrunavoid(){
         try {
             runOnUiThread(() -> {
@@ -84,7 +84,7 @@ public class HomepageTest {
         }
     }
 
-
+*/
 
     @Test
     public void jjustrunavoid(){
