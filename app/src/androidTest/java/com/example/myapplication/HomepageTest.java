@@ -58,6 +58,30 @@ public class HomepageTest {
     }
 
 
+    @Test
+    public void justyrunavoid(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userchat).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+    @Test
+    public void justrunavoikd(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userwishlist).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
 
 
 
