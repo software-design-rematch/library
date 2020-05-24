@@ -104,7 +104,7 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
             startActivity(intent);
         }
 
-        if(v.equals(v.equals(sendM))){
+        if(v.equals(sendM)){
 
             String Remail =a.getText().toString().trim();
             String msge=b.getText().toString().trim();
