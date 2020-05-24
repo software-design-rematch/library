@@ -59,17 +59,6 @@ public class HomepageTest {
 
 
 
-    @Test
-    public void checkissue() throws Throwable{
-
-
-
-        runOnUiThread(() -> {
-            activityTestRule.getActivity().findViewById(R.id.isuebook).performClick();
-
-        });
-
-    }
 
 
 
