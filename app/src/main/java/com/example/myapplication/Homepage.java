@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
-    Button ad,deletebook,SBOOK,IBOOK,RBOOK,Upro,Uhis,Uchat;
+    Button ad,deletebook,SBOOK,IBOOK,RBOOK,Upro,Uhis,Uchat,Uwish;
     String ems;
 
     @Override
@@ -25,6 +25,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         Upro=(Button)findViewById(R.id.userprofile);
         Uhis=(Button)findViewById(R.id.userhistroy);
         Uchat=(Button)findViewById(R.id.userchat);
+        Uwish=(Button)findViewById(R.id.userwishlist);
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
 
@@ -37,6 +38,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         Upro.setOnClickListener(this);
         Uhis.setOnClickListener(this);
         Uchat.setOnClickListener(this);
+        Uwish.setOnClickListener(this);
 
     }
 
@@ -123,6 +125,15 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         }
 
+
+
+        if(v.equals(Uwish)){
+            Intent intent = new Intent(Homepage.this,Wishlist.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+
+
+        }
 
 
     }
