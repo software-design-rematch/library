@@ -86,4 +86,40 @@ public class HomepageTest {
 
 
 
+
+    //////
+
+
+    @Test
+    public void justjrunavoikd(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userhistroy).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
+    @Test
+    public void justjruknavoikd(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.userprofile).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
 }
