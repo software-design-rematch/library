@@ -10,26 +10,19 @@ import org.junit.runner.RunWith;
 import static androidx.test.internal.runner.junit4.statement.UiThreadStatement.runOnUiThread;
 import static org.junit.Assert.*;
 
-
 @RunWith(AndroidJUnit4.class)
-public class AddBooksTest {
+public class DeleteTest {
+
 
     @Rule
-    public ActivityTestRule<Homepage> activityTestRule = new ActivityTestRule<>(Homepage.class);
-
-
-
-
-
-
-
-
+    public ActivityTestRule<Login> activityTestRule = new ActivityTestRule<>(Login.class);
 
     @Test
-    public void bgeddbook(){
+    public void tryLoginAsStudent(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.dp).performClick();
+                activityTestRule.getActivity().findViewById(R.id.backk).performClick();
+
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -38,22 +31,11 @@ public class AddBooksTest {
 
 
     @Test
-    public void bgedaddbook(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.nextt).performClick();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-    @Test
-    public void bgsedaddbook(){
+    public void tryLoginAsStudessnt(){
         try {
             runOnUiThread(() -> {
                 activityTestRule.getActivity().findViewById(R.id.scancode).performClick();
+
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -62,22 +44,17 @@ public class AddBooksTest {
 
 
     @Test
-    public void bgedaddbojhok(){
+    public void tryLogisdnAsStudent(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.dp).performClick();
+                activityTestRule.getActivity().findViewById(R.id.deletebooks).performClick();
+        
+
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
     }
-
-
-
-
-
-
-
 
 
 
