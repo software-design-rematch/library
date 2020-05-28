@@ -18,7 +18,7 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
 
     String ems;
     Button bt,sendM;
-    EditText a,b;
+    EditText aa,ba;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +30,8 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
 
         bt=(Button)findViewById(R.id.back);
         sendM=(Button)findViewById(R.id.sendmessage);
-        a =(EditText)findViewById(R.id.email);
-        b =(EditText)findViewById(R.id.message);
+        aa =(EditText)findViewById(R.id.email);
+        ba =(EditText)findViewById(R.id.message);
 
         bt.setOnClickListener(this);
         sendM.setOnClickListener(this);
@@ -106,17 +106,17 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
 
         if(v.equals(sendM)){
 
-            String Remail =a.getText().toString().trim();
-            String msge=b.getText().toString().trim();
+            String Remail =aa.getText().toString().trim();
+            String msge=ba.getText().toString().trim();
             boolean st= true;
 
             if(Remail.equals("")){
-                a.setError("receiver email cannot be empty");
+                aa.setError("receiver email cannot be empty");
                 st=false;
             }
 
             if(msge.equals("")){
-                b.setError("please tyoe in a message");
+                ba.setError("please tyoe in a message");
                 st= false;
             }
 
@@ -129,7 +129,7 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
                 Backchating backgroundTask = new Backchating(getApplicationContext(),"");
                 backgroundTask.execute(type,ems,Remail,msge);
 
-                a.setText("");
+                aa.setText("");
                 Intent intent = new Intent(chating.this,Homepage.class);
                 intent.putExtra("email",ems);
                 startActivity(intent);
