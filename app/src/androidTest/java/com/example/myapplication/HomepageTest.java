@@ -23,7 +23,7 @@ public class HomepageTest {
     public void gedaddbook(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.addbook).performClick();
+                activityTestRule.getActivity().findViewById(R.id.profileee).performClick();
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -36,7 +36,7 @@ public class HomepageTest {
     public void geletebookssss(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.deletebook).performClick();
+                activityTestRule.getActivity().findViewById(R.id.chatsss).performClick();
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -49,7 +49,7 @@ public class HomepageTest {
     public void justrunavoid(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.searchbook).performClick();
+                activityTestRule.getActivity().findViewById(R.id.wishhh).performClick();
 
             });
         } catch (Throwable throwable) {
@@ -62,7 +62,7 @@ public class HomepageTest {
     public void justyrunavoid(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.userchat).performClick();
+                activityTestRule.getActivity().findViewById(R.id.booksss).performClick();
 
             });
         } catch (Throwable throwable) {
@@ -75,7 +75,7 @@ public class HomepageTest {
     public void justrunavoikd(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.userwishlist).performClick();
+                activityTestRule.getActivity().findViewById(R.id.addbk).performClick();
 
             });
         } catch (Throwable throwable) {
@@ -94,7 +94,7 @@ public class HomepageTest {
     public void justjrunavoikd(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.userhistroy).performClick();
+                activityTestRule.getActivity().findViewById(R.id.deletebk).performClick();
 
             });
         } catch (Throwable throwable) {
@@ -110,7 +110,7 @@ public class HomepageTest {
     public void justjruknavoikd(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.userprofile).performClick();
+                activityTestRule.getActivity().findViewById(R.id.searchbk).performClick();
 
             });
         } catch (Throwable throwable) {

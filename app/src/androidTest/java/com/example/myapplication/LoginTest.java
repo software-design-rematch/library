@@ -31,4 +31,22 @@ public class LoginTest {
             throwable.printStackTrace();
         }
     }
+
+
+
+    @Test
+    public void logingpback(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.signin).performClick();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
 }

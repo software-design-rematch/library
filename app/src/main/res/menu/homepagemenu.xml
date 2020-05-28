@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+
+    <item android:id="@+id/profileee"
+        android:title="profile"
+    ></item>
+
+    <item android:id="@+id/chatsss"
+          android:title="chats"
+
+        ></item>
+
+
+    <item android:id="@+id/wishhh"
+          android:title="wishlist"
+        ></item>
+
+
+    <item android:id="@+id/booksss"
+            android:title="books"
+            >
+
+        <menu>
+
+
+            <item android:id="@+id/addbk"
+                android:title="add books"
+                ></item>
+
+
+            <item android:id="@+id/deletebk"
+                    android:title="delete books"
+                ></item>
+
+            <item android:id="@+id/searchbk"
+                    android:title="search books"
+                ></item>
+
+
+            <item android:id="@+id/loanbk"
+                    android:title="loan books"
+                ></item>
+
+            <item android:title="return books"
+                    android:id="@+id/returnbk"
+                ></item>
+
+
+        </menu>
+
+
+
+        ></item>
+
+</menu>

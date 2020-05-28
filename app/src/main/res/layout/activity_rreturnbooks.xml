@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="please type in book code"
-
+        android:textColor="@color/colorPrimary"
         ></EditText>
 
     <Button
@@ -42,6 +42,7 @@
         android:background="@color/white"
         android:layout_alignParentLeft="true"
         android:text="Scan ISBN"
+        android:textColor="@color/colorPrimary"
         ></Button>
 
     <Button
@@ -53,6 +54,7 @@
         android:background="@color/white"
         android:layout_alignParentRight="true"
         android:text="back"
+        android:textColor="@color/colorPrimary"
         ></Button>
 
 
@@ -64,6 +66,7 @@
         android:layout_below="@id/back"
         android:layout_centerHorizontal="true"
         android:background="@color/white"
+        android:textColor="@color/colorPrimary"
         android:text="return book"></Button>
 
 

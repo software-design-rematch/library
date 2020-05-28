@@ -9,7 +9,7 @@
 
 
     <EditText
-
+        android:textColor="@color/colorPrimary"
         android:id="@+id/booknameorauthor"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -30,6 +30,7 @@
         android:layout_height="50dp"
         android:background="@color/white"
         android:text="SEARCH"
+        android:textColor="@color/colorPrimary"
         android:layout_below="@id/booknameorauthor"
         android:layout_alignParentLeft="true"
         ></Button>
@@ -40,6 +41,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/booknameorauthor"
         android:layout_alignParentRight="true"
+        android:textColor="@color/colorPrimary"
         android:layout_marginStart="11dp"
         android:layout_marginLeft="11dp"
         android:layout_toEndOf="@+id/sBOOK"
@@ -60,7 +62,7 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
 
-
+            android:textColor="@color/colorPrimary"
             ></TextView>
 
 

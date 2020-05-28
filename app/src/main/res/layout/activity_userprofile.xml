@@ -15,9 +15,10 @@
         android:layout_marginTop="50dp"
         android:id="@+id/back"
         android:background="@color/white"
-        android:text="BACK"
+        android:text="HOMEPAGE"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textColor="@color/colorPrimary"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
@@ -33,6 +34,7 @@
             android:id="@+id/displayinfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:textSize="20dp"
 
 

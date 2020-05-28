@@ -1,15 +1,21 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.zip.Inflater;
+
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
-    Button ad,deletebook,SBOOK,IBOOK,RBOOK,Upro,Uhis,Uchat,Uwish;
+
     String ems;
 
     @Override
@@ -17,123 +23,89 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getSupportActionBar().setTitle("LIBRARY");
-        deletebook=(Button)findViewById(R.id.deletebook);
-        ad =(Button)findViewById(R.id.addbook);
-        SBOOK=(Button)findViewById(R.id.searchbook);
-        IBOOK=(Button)findViewById(R.id.isuebook);
-        RBOOK=(Button)findViewById(R.id.returnbook);
-        Upro=(Button)findViewById(R.id.userprofile);
-        Uhis=(Button)findViewById(R.id.userhistroy);
-        Uchat=(Button)findViewById(R.id.userchat);
-        Uwish=(Button)findViewById(R.id.userwishlist);
+
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
 
 
-        ad.setOnClickListener(this);
-        deletebook.setOnClickListener(this);
-        SBOOK.setOnClickListener(this);
-        IBOOK.setOnClickListener(this);
-        RBOOK.setOnClickListener(this);
-        Upro.setOnClickListener(this);
-        Uhis.setOnClickListener(this);
-        Uchat.setOnClickListener(this);
-        Uwish.setOnClickListener(this);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.homepagemenu,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+
+            case R.id.profileee:
+                Intent intent = new Intent(Homepage.this,Userprofile.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
+                return true;
+
+
+            case  R.id.chatsss:
+                Intent intent1 = new Intent(Homepage.this,chating.class);
+                intent1.putExtra("email",ems);
+                startActivity(intent1);
+                return true;
+
+
+            case R.id.wishhh:
+                Intent intent2 = new Intent(Homepage.this,Wishlist.class);
+                intent2.putExtra("email",ems);
+                startActivity(intent2);
+                return true;
+
+            case  R.id.addbk:
+                Intent intent3 = new Intent(Homepage.this,AddBooks.class);
+                intent3.putExtra("email",ems);
+                startActivity(intent3);
+                return true;
+
+            case R.id.deletebk:
+                Intent intent4 = new Intent(Homepage.this,Delete.class);
+                intent4.putExtra("email",ems);
+                startActivity(intent4);
+                return true;
+
+
+            case R.id.searchbk:
+                Intent intent5 = new Intent(Homepage.this,searchbooksss.class);
+                intent5.putExtra("email",ems);
+                startActivity(intent5);
+                return true;
+
+            case R.id.loanbk:
+                Intent intent6 = new Intent(Homepage.this,Issuebook.class);
+                intent6.putExtra("email",ems);
+                startActivity(intent6);
+                return  true;
+
+            case  R.id.returnbk:
+                Intent intent7 = new Intent(Homepage.this,rreturnbooks.class);
+                intent7.putExtra("email",ems);
+                startActivity(intent7);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+
 
     }
 
     @Override
     public void onClick(View v) {
 
-
-
-
-        if(v.equals(RBOOK)){
-            Intent intent = new Intent(Homepage.this,rreturnbooks.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-        if(v.equals(Upro)){
-            Intent intent = new Intent(Homepage.this,Userprofile.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-
-
-        if(v.equals(ad)){
-            Intent intent = new Intent(Homepage.this,AddBooks.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-
-        }
-
-        if(v.equals(deletebook)){
-            Intent intent = new Intent(Homepage.this,Delete.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-        if(v.equals(SBOOK)){
-
-            Intent intent = new Intent(Homepage.this,searchbooksss.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-        if(v.equals(IBOOK)){
-            Intent intent = new Intent(Homepage.this,Issuebook.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-
-
-        if(v.equals(Uhis)){
-            Intent intent = new Intent(Homepage.this,Userhistrory.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-
-        if(v.equals(Uchat)){
-            Intent intent = new Intent(Homepage.this,chating.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
-
-
-
-        if(v.equals(Uwish)){
-            Intent intent = new Intent(Homepage.this,Wishlist.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-        }
 
 
     }

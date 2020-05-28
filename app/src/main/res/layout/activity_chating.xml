@@ -19,6 +19,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
         ></EditText>
 
     <Button
@@ -28,6 +29,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
+        android:textColor="@color/colorPrimary"
         android:layout_toEndOf="@+id/email"
         android:layout_toRightOf="@+id/email"
         android:background="@color/white"
@@ -40,6 +42,7 @@
         android:hint="type message..."
         android:layout_alignParentLeft="true"
         android:layout_below="@id/email"
+        android:textColor="@color/colorPrimary"
         ></EditText>
 
     <Button
@@ -50,6 +53,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
+        android:textColor="@color/colorPrimary"
         android:layout_toEndOf="@+id/message"
         android:layout_toRightOf="@+id/message"
         android:background="@color/white"

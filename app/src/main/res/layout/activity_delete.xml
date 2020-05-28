@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="type in isbn"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimary"
 
         ></EditText>
 
@@ -62,7 +62,8 @@
         android:layout_marginTop="50dp"
         android:layout_below="@+id/deletebooks"
         android:background="@color/white"
-        android:text="BACK"
+        android:text="HOMEPAGE"
+        android:textColor="@color/colorPrimary"
         android:textSize="20dp"
 
 
