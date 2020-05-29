@@ -16,7 +16,7 @@ public class createAccount extends AppCompatActivity implements View.OnClickList
     TextView a,b,c,d,e,lg;
     String nnn="";
     Button cre;
-
+    String na,sur,em,ps,pss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,42 +54,44 @@ public class createAccount extends AppCompatActivity implements View.OnClickList
 
 
 
-            String na = a.getText().toString();
-            String sur =b.getText().toString();
-            String em  =c.getText().toString();
-            String ps =d.getText().toString();
-            String pss=e.getText().toString();
+//            String na = a.getText().toString();
+//            String sur =b.getText().toString();
+//            String em  =c.getText().toString();
+//            String ps =d.getText().toString();
+//            String pss=e.getText().toString();
 
-            boolean state = true;
-            if(na.equals("")){
-                state = false;
-                a.setError("please input name(s)");
-            }
-            if(sur.equals("")){
-                state = false;
-                b.setError("surname can not be empty");
-            }
-            if(em.equals("")){
-                state = false;
-                c.setError("email address can not be empty");
-            }
-            if(ps.equals("")){
-                state = false;
-                d.setError("password can not be empty");
-            }
+            takeinput();
 
-            if(!pss.equals(ps)){
-                state = false;
-                e.setError("password did not match");
+//            boolean state = true;
+//            if(na.equals("")){
+//                state = false;
+//                a.setError("please input name(s)");
+//            }
+//            if(sur.equals("")){
+//                state = false;
+//                b.setError("surname can not be empty");
+//            }
+//            if(em.equals("")){
+//                state = false;
+//                c.setError("email address can not be empty");
+//            }
+//            if(ps.equals("")){
+//                state = false;
+//                d.setError("password can not be empty");
+//            }
+//
+//            if(!pss.equals(ps)){
+//                state = false;
+//                e.setError("password did not match");
+//
+//            }
+//            if(nnn.equals("")){
+//                Toast.makeText(getApplicationContext(),"please select your gender",Toast.LENGTH_SHORT).show();
+//                state = false;
+//            }
+//
 
-            }
-            if(nnn.equals("")){
-                Toast.makeText(getApplicationContext(),"please select your gender",Toast.LENGTH_SHORT).show();
-                state = false;
-            }
-
-
-            else if(state == true){
+            if(verifyinput(na,sur,em,ps,pss,nnn) ==  true){
 
                     String type ="reg";
                     BackgroundTask backgroundTask = new BackgroundTask(getApplicationContext(),"");
@@ -140,21 +142,60 @@ public class createAccount extends AppCompatActivity implements View.OnClickList
 
 
 
+    }
 
 
 
 
+    public  boolean verifyinput(String na,String sur,String em,String ps,String pss,String nnn){
+
+
+        boolean state = true;
+        if(na.equals("")){
+            state = false;
+            a.setError("please input name(s)");
+        }
+        if(sur.equals("")){
+            state = false;
+            b.setError("surname can not be empty");
+        }
+        if(em.equals("")){
+            state = false;
+            c.setError("email address can not be empty");
+        }
+        if(ps.equals("")){
+            state = false;
+            d.setError("password can not be empty");
+        }
+
+        if(!pss.equals(ps)){
+            state = false;
+            e.setError("password did not match");
+
+        }
+        if(nnn.equals("")){
+            Toast.makeText(getApplicationContext(),"please select your gender",Toast.LENGTH_SHORT).show();
+            state = false;
+        }
 
 
 
 
+        return state;
+    }
 
 
+    public void takeinput(){
+
+             na = a.getText().toString();
+             sur =b.getText().toString();
+             em  =c.getText().toString();
+             ps =d.getText().toString();
+             pss=e.getText().toString();
 
 
 
     }
-
 
 
 

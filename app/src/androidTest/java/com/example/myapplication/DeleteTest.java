@@ -48,7 +48,7 @@ public class DeleteTest {
         try {
             runOnUiThread(() -> {
                 activityTestRule.getActivity().findViewById(R.id.deletebooks).performClick();
-        
+
 
             });
         } catch (Throwable throwable) {
