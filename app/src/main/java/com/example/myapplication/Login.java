@@ -16,7 +16,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     EditText a, b;
     TextView siup, siin;
-    String ems="";
+    String ems="",pas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,47 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
     }
+
+
+
+
+    public void takeinput(){
+
+        ems = a.getText().toString();
+        pas = b.getText().toString();
+
+
+    }
+
+
+    public  int verifyinput(String ems,String pas){
+
+
+        int state = 1;
+
+
+        if (ems.equals("")) {
+
+            a.setError("Email address can not be empty");
+            state = 0;
+
+        }
+
+
+        if (pas.equals("")) {
+            state = 0;
+            b.setError("password can not be empty");
+
+        }
+
+
+
+
+
+        return state;
+    }
+
+
 
     @Override
     public void onClick(View view) {
@@ -64,26 +105,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if (view.equals(siin)) {
 
-            ems = a.getText().toString();
-            String pas = b.getText().toString();
-
-            boolean LoginState = true;
+            takeinput();
 
 
-            if (ems.equals("")) {
-
-                a.setError("Email address can not be empty");
-                LoginState = false;
-
-            }
 
 
-            if (pas.equals("")) {
-                LoginState = false;
-                b.setError("password can not be empty");
-
-            }
-             else if(ems.equals("cassius") && pas.equals("cassius")){
+            if(ems.equals("cassius") && pas.equals("cassius")){
 
                 Intent Home = new Intent(Login.this, Homepage.class);
                 Home.putExtra("email", ems);
@@ -92,7 +119,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
             }
 
-             else if (LoginState == true) {
+             else if (verifyinput(ems,pas) == 1) {
 
 
                 String adress = "http://192.168.43.68/login.php";

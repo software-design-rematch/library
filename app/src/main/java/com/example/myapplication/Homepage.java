@@ -62,7 +62,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = " "+"email  :  "+" "+Aw.get("email")+" "+"\n"+"\n"+"book code  :  "+Aw.get("isbn")+"\n"+"\n"+"  "+"time  :  "+" "+Aw.get("returntime");
+                        some = " "+"email  :  "+" "+Aw.get("email")+" "+"\n"+"\n"+"book code  :  "+Aw.get("isbn")+"\n"+"\n"+"  "+"time  :  "+" "+Aw.get("returntime")+"\n"+"\n";
                         Arr1[i]=some;
                     }
 

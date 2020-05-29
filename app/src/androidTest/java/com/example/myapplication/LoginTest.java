@@ -33,6 +33,20 @@ public class LoginTest {
     }
 
 
+    @Test
+    public void dummyFunctionWithParams(){
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().verifyinput("cassius","password");
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
 
     @Test
     public void logingpback(){
@@ -45,6 +59,18 @@ public class LoginTest {
         }
     }
 
+
+
+    @Test
+    public void loglingpback(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.signup).performClick();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
 
 
 
