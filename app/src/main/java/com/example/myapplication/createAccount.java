@@ -91,7 +91,7 @@ public class createAccount extends AppCompatActivity implements View.OnClickList
 //            }
 //
 
-            if(verifyinput(na,sur,em,ps,pss,nnn) ==  true){
+            if(verifyinput(na,sur,em,ps,pss,nnn) ==  1){
 
                     String type ="reg";
                     BackgroundTask backgroundTask = new BackgroundTask(getApplicationContext(),"");
@@ -147,35 +147,35 @@ public class createAccount extends AppCompatActivity implements View.OnClickList
 
 
 
-    public  boolean verifyinput(String na,String sur,String em,String ps,String pss,String nnn){
+    public  int verifyinput(String na,String sur,String em,String ps,String pss,String nnn){
 
 
-        boolean state = true;
+        int state = 1;
         if(na.equals("")){
-            state = false;
+            state = 0;
             a.setError("please input name(s)");
         }
         if(sur.equals("")){
-            state = false;
+            state = 0;
             b.setError("surname can not be empty");
         }
         if(em.equals("")){
-            state = false;
+            state = 0;
             c.setError("email address can not be empty");
         }
         if(ps.equals("")){
-            state = false;
+            state = 0;
             d.setError("password can not be empty");
         }
 
         if(!pss.equals(ps)){
-            state = false;
+            state = 0;
             e.setError("password did not match");
 
         }
         if(nnn.equals("")){
             Toast.makeText(getApplicationContext(),"please select your gender",Toast.LENGTH_SHORT).show();
-            state = false;
+            state = 0;
         }
 
 

@@ -36,8 +36,8 @@ public class createAccountTest {
 
     @Test
     public void testVerifyinput(){
-        boolean res = createA.verifyinput("cassius","surname","c@gmail.com","aa","aa","male");
-        assertEquals("failed",true,res);
+        int res = createA.verifyinput("cassius","surname","c@gmail.com","aa","aa","male");
+       assertEquals("failed",1,res);
 
     }
 
