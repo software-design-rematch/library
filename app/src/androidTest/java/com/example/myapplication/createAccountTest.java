@@ -31,28 +31,6 @@ public class createAccountTest {
 
     }
 
-    @Test
-    public void onCreate() {
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().onCreate(new Bundle());
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-    @Test
-    public void dummyFunction() {
-        try{
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().takeinput();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
 
 
 
