@@ -36,10 +36,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
     }
-
-
-
-
     public void takeinput(){
 
         ems = a.getText().toString();
@@ -48,85 +44,31 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-
     public  int verifyinput(String ems,String pas){
-
-
         int state = 1;
-
-
-        if (ems.equals("")) {
-
-            a.setError("Email address can not be empty");
+        if (ems.equals("")) { a.setError("Email address can not be empty");
             state = 0;
-
-        }
-
-
-        if (pas.equals("")) {
-            state = 0;
-            b.setError("password can not be empty");
-
-        }
-
-
-
-
-
+        }if (pas.equals("")) { state = 0;
+            b.setError("password can not be empty"); }
         return state;
     }
-
-
-
     @Override
     public void onClick(View view) {
-
-
-
         if (view.equals(siup)) {
-
-            //done
-
             Intent intent = new Intent(Login.this, createAccount.class);
             startActivity(intent);
             a.setText("");
-            b.setText("");
-
-        }
-
-
-
-
-
-
-
-
-
-
+            b.setText(""); }
         if (view.equals(siin)) {
-
             takeinput();
-
-
-
-
             if(ems.equals("cassius") && pas.equals("cassius")){
-
                 Intent Home = new Intent(Login.this, Homepage.class);
                 Home.putExtra("email", ems);
-                startActivity(Home);
-
-
-            }
-
-             else if (verifyinput(ems,pas) == 1) {
-
-
+                startActivity(Home);} else if (verifyinput(ems,pas) == 1) {
                 String adress = "http://192.168.43.68/login.php";
                 ContentValues Content = new ContentValues();
                 Content.put("email", ems);
                 Content.put("password", pas);
-
                 AsyncHTTPPost ident = new AsyncHTTPPost(adress, Content) {
                     @Override
                     protected void onPostExecute(String output) {
@@ -140,40 +82,4 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             a.setError("Username and Password don't match");
                         } else if (output.equals("false")){
                             a.setError("not registered");
-                        }
-                    }
-                };
-                ident.execute();
-
-
-
-                
-
-            }
-
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-}
+                        } }};ident.execute(); } } }}

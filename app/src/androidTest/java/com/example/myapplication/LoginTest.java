@@ -47,6 +47,18 @@ public class LoginTest {
 
 
 
+    @Test
+    public void taleparams(){
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().takeinput();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
 
     @Test
     public void logingpback(){
