@@ -46,18 +46,7 @@ public class LoginTest {
 
 
 
-
-    @Test
-    public void taleparams(){
-        try{
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().takeinput();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
+    
 
 
     @Test
@@ -73,16 +62,6 @@ public class LoginTest {
 
 
 
-    @Test
-    public void loglingpback(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.signup).performClick();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
 
 
 
