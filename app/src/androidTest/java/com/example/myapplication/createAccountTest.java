@@ -25,17 +25,7 @@ public class createAccountTest {
     public ActivityTestRule<createAccount> activityTestRule = new ActivityTestRule<>(createAccount.class);
 
 
-    @Test
-    public void onCreate() {
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().onCreate(new Bundle());
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
+   
 
 
 
