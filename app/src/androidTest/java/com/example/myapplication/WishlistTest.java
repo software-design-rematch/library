@@ -30,11 +30,4 @@ public class WishlistTest {
     }
 
 
-    @Test
-
-
-    private void run() {
-        activityTestRule.getActivity().findViewById(R.id.signin).performClick();
-
-    }
 }
