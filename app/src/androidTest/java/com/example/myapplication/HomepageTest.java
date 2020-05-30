@@ -22,16 +22,7 @@ public class HomepageTest {
     public ActivityTestRule<Homepage> activityTestRule = new ActivityTestRule<>(Homepage.class);
 
 
-    @Test
-    public void onCreate() {
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().onCreate(new Bundle());
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
+
 
 
     @Test
@@ -44,6 +35,7 @@ public class HomepageTest {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
+
     }
 
 
