@@ -31,13 +31,6 @@ public class WishlistTest {
 
 
     @Test
-    public void tryLoginAsStudent(){
-        try {
-            runOnUiThread(this::run);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
 
 
     private void run() {
