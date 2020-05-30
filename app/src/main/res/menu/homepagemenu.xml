@@ -4,23 +4,27 @@
     >
 
 
-    <item android:id="@+id/profileee"
-        android:title="profile"
-    ></item>
-
-    <item android:id="@+id/chatsss"
-          android:title="chats"
-
-        ></item>
-
 
     <item android:id="@+id/wishhh"
-          android:title="wishlist"
+        android:title="wishlist"
         ></item>
 
+
+
+
+
+    <item android:id="@+id/rateusssser"
+             android:title="rate user"
+
+        ></item>
+
+    <item  android:id="@+id/ratebooook"
+            android:title="rate book"
+></item>
 
     <item android:id="@+id/booksss"
             android:title="books"
+            android:icon="@drawable/ic_library_books"
             >
 
         <menu>

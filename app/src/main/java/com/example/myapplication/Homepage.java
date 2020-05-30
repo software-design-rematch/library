@@ -12,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +32,82 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getSupportActionBar().setTitle("LIBRARY");
+
+        BottomNavigationView bottomNavigationView =findViewById(R.id.bottommenu);
+
+
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+
+                switch (menuItem.getItemId()) {
+
+
+
+
+
+
+                    case R.id.profileee:
+                        Intent intent = new Intent(Homepage.this,Userprofile.class);
+                        intent.putExtra("email",ems);
+                        startActivity(intent);
+                       // overridePendingTransition(0,0);
+                        return true;
+
+
+
+
+                    case R.id.out:
+
+
+                        Intent intent11 = new Intent(Homepage.this, createAccount.class);
+                        Toast.makeText(getApplicationContext(),"goodbye",Toast.LENGTH_SHORT).show();
+                        startActivity(intent11);
+
+
+                        return true;
+
+
+                    case R.id.chatsss:
+                        Intent intent1 = new Intent(Homepage.this, chating.class);
+                        intent1.putExtra("email", ems);
+                        startActivity(intent1);
+                        //overridePendingTransition(0,0);
+                        return true;
+
+
+
+                    default:
+                        return  false;
+                }
+
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
@@ -119,25 +198,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
 
-            case R.id.profileee:
-                Intent intent = new Intent(Homepage.this,Userprofile.class);
-                intent.putExtra("email",ems);
-                startActivity(intent);
-                return true;
-
-
-            case  R.id.chatsss:
-                Intent intent1 = new Intent(Homepage.this,chating.class);
-                intent1.putExtra("email",ems);
-                startActivity(intent1);
-                return true;
-
-
             case R.id.wishhh:
                 Intent intent2 = new Intent(Homepage.this,Wishlist.class);
                 intent2.putExtra("email",ems);
                 startActivity(intent2);
+
                 return true;
+
+
 
             case  R.id.addbk:
                 Intent intent3 = new Intent(Homepage.this,AddBooks.class);

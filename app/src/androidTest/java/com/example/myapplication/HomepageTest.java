@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
 import android.widget.Button;
+import android.widget.PopupMenu;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
@@ -19,38 +21,12 @@ public class HomepageTest {
     @Rule
     public ActivityTestRule<Homepage> activityTestRule = new ActivityTestRule<>(Homepage.class);
 
-    @Test
-    public void gedaddbook(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.profileee).performClick();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
 
     @Test
-    public void geletebookssss(){
+    public void onCreate() {
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.chatsss).performClick();
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-
-    @Test
-    public void justrunavoid(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.wishhh).performClick();
-
+                activityTestRule.getActivity().onCreate(new Bundle());
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -59,59 +35,11 @@ public class HomepageTest {
 
 
     @Test
-    public void justyrunavoid(){
+    public void onCreateMenu(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.booksss).performClick();
-
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-    @Test
-    public void justrunavoikd(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.addbk).performClick();
-
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-
-
-
-    //////
-
-
-    @Test
-    public void justjrunavoikd(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.deletebk).performClick();
-
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
-
-
-
-
-
-    @Test
-    public void justjruknavoikd(){
-        try {
-            runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.searchbk).performClick();
-
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                activityTestRule.getActivity().onCreateOptionsMenu(p.getMenu());
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
