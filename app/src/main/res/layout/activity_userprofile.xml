@@ -11,22 +11,10 @@
 
 
 
-    <Button
-        android:layout_marginTop="50dp"
-        android:id="@+id/back"
-        android:background="@color/white"
-        android:text="HOMEPAGE"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-
-></Button>
 
     <ScrollView
-        android:layout_below="@id/back"
+        android:id="@+id/bt"
+        android:layout_above="@id/bottomprofile"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -44,6 +32,17 @@
 
 
     </ScrollView>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/promenu"
+        android:id="@+id/bottomprofile"
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

@@ -161,6 +161,21 @@ public class HomepageTest {
 
 
 
+    @Test
+    public void BItem4(){
+        try{
+            runOnUiThread(() -> {
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.homebottommenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.his);
+                activityTestRule.getActivity().bswitch(dummyMenuItem1);
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
 
 
 }

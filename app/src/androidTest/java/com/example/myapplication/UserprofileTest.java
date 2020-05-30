@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
+import android.view.MenuItem;
+import android.widget.PopupMenu;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
@@ -18,11 +21,14 @@ public class UserprofileTest {
     public ActivityTestRule<Userprofile> activityTestRule = new ActivityTestRule<>(Userprofile.class);
 
 
-    @Test
-    public void logingpback(){
-        try {
+
+    public void BItem(){
+        try{
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.back).performClick();
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.promenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.homee);
+                activityTestRule.getActivity().Bswitch(dummyMenuItem1);
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();

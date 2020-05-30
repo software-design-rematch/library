@@ -1,13 +1,18 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,8 +32,37 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
 
-        bt=(Button)findViewById(R.id.back);
-        bt.setOnClickListener(this);
+        //bt=(Button)findViewById(R.id.back);
+        //bt.setOnClickListener(this);
+
+
+
+
+
+
+        BottomNavigationView bottomNavigationView =findViewById(R.id.bottomprofile);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                Bswitch(menuItem);
+                return false;
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         final TextView t = (TextView)findViewById(R.id.displayinfo);
@@ -84,11 +118,34 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
 
     }
 
+
+    public  boolean Bswitch(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+
+            case R.id.homee:
+                Intent intent = new Intent(Userprofile.this,Homepage.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
+                return true;
+
+            default:
+                return  false;
+
+        }
+
+
+    }
+
+
+
+
+
     @Override
     public void onClick(View v) {
 
 
-        if(v.equals(bt)){
+/*        if(v.equals(bt)){
 
             Intent intent = new Intent(Userprofile.this,Homepage.class);
             intent.putExtra("email",ems);
@@ -98,7 +155,7 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
 
 
         }
-
+*/
 
 
     }
