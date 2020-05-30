@@ -32,7 +32,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getSupportActionBar().setTitle("LIBRARY");
-
+/*
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottommenu);
 
 
@@ -95,7 +95,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
 
 
-
+*/
 
 
 
