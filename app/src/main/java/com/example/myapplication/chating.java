@@ -94,6 +94,25 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
 
     }
 
+
+
+    public  boolean verifyinput(String a,String b){
+        boolean st= true;
+
+        if(a.equals("")){
+            aa.setError("receiver email cannot be empty");
+            st=false;
+        }
+
+        if(b.equals("")){
+            ba.setError("please tyoe in a message");
+            st= false;
+        }
+
+    return st;
+
+    }
+
     @Override
     public void onClick(View v) {
 
@@ -108,22 +127,8 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
 
             String Remail =aa.getText().toString().trim();
             String msge=ba.getText().toString().trim();
-            boolean st= true;
 
-            if(Remail.equals("")){
-                aa.setError("receiver email cannot be empty");
-                st=false;
-            }
-
-            if(msge.equals("")){
-                ba.setError("please tyoe in a message");
-                st= false;
-            }
-
-            else if(st == true){
-
-                //send msg...check if the receiver email exist...then send msg
-
+            if(verifyinput(Remail,msge) == true){
 
                 String type ="reg";
                 Backchating backgroundTask = new Backchating(getApplicationContext(),"");
@@ -133,9 +138,6 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
                 Intent intent = new Intent(chating.this,Homepage.class);
                 intent.putExtra("email",ems);
                 startActivity(intent);
-
-
-
 
             }
 
