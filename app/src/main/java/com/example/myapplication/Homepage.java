@@ -43,50 +43,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
 
-                switch (menuItem.getItemId()) {
-
-
-
-
-
-
-                    case R.id.profileee:
-                        Intent intent = new Intent(Homepage.this,Userprofile.class);
-                        intent.putExtra("email",ems);
-                        startActivity(intent);
-                       // overridePendingTransition(0,0);
-                        return true;
-
-
-
-
-                    case R.id.out:
-
-
-                        Intent intent11 = new Intent(Homepage.this, createAccount.class);
-                        Toast.makeText(getApplicationContext(),"goodbye",Toast.LENGTH_SHORT).show();
-                        startActivity(intent11);
-
-
-                        return true;
-
-
-                    case R.id.chatsss:
-                        Intent intent1 = new Intent(Homepage.this, chating.class);
-                        intent1.putExtra("email", ems);
-                        startActivity(intent1);
-                        //overridePendingTransition(0,0);
-                        return true;
-
-
-
-                    default:
-                        return  false;
-                }
-
-
-
-
+                bswitch(menuItem);
+                return  false;
 
             }
         });
@@ -192,6 +150,57 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         return true;
     }
 
+
+    public boolean bswitch(MenuItem menuItem)
+    {
+
+
+        switch (menuItem.getItemId()) {
+
+
+
+
+
+
+            case R.id.profileee:
+                Intent intent = new Intent(Homepage.this,Userprofile.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
+                // overridePendingTransition(0,0);
+                return true;
+
+
+
+
+            case R.id.out:
+
+
+                Intent intent11 = new Intent(Homepage.this, createAccount.class);
+                Toast.makeText(getApplicationContext(),"goodbye",Toast.LENGTH_SHORT).show();
+                startActivity(intent11);
+
+
+                return true;
+
+
+            case R.id.chatsss:
+                Intent intent1 = new Intent(Homepage.this, chating.class);
+                intent1.putExtra("email", ems);
+                startActivity(intent1);
+                //overridePendingTransition(0,0);
+                return true;
+
+
+
+            default:
+                return  false;
+        }
+
+
+
+
+
+    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

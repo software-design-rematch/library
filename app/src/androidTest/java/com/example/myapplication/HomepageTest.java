@@ -89,6 +89,55 @@ public class HomepageTest {
     }
 
 
+    @Test
+    public void BItem1(){
+        try{
+            runOnUiThread(() -> {
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.homebottommenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.profileee);
+                activityTestRule.getActivity().bswitch(dummyMenuItem1);
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+    @Test
+    public void BItem2(){
+        try{
+            runOnUiThread(() -> {
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.homebottommenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.chatsss);
+                activityTestRule.getActivity().bswitch(dummyMenuItem1);
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+    @Test
+    public void BItem3(){
+        try{
+            runOnUiThread(() -> {
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.homebottommenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.out);
+                activityTestRule.getActivity().bswitch(dummyMenuItem1);
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
 
 
 
