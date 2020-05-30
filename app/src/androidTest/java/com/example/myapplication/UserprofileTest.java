@@ -35,7 +35,7 @@ public class UserprofileTest {
     }
 
 
-  /*  public void Item(){
+    public void Ittem(){
         try{
             runOnUiThread(() -> {
                 PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
@@ -47,7 +47,7 @@ public class UserprofileTest {
             throwable.printStackTrace();
         }
     }
-*/
+
 
 
 }
