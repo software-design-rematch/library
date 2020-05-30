@@ -52,20 +52,19 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
             }
         });
 
+        //display data
+        exEverything();
+
+    }
 
 
 
 
 
-
-
-
-
-
-
-
+    public  void  exEverything(){
 
         final TextView t = (TextView)findViewById(R.id.displayinfo);
+
         ContentValues params = new ContentValues();
         params.put("email",ems);
 
@@ -107,23 +106,15 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
         };
         asyncHTTPPost.execute();
 
-
-
-
-
-
-
-
-
-
     }
+
 
 
     public  boolean Bswitch(MenuItem menuItem){
 
         switch (menuItem.getItemId()){
 
-            case R.id.homee:
+            case R.id.homaee:
                 Intent intent = new Intent(Userprofile.this,Homepage.class);
                 intent.putExtra("email",ems);
                 startActivity(intent);
@@ -137,26 +128,8 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
 
     }
 
-
-
-
-
     @Override
     public void onClick(View v) {
-
-
-/*        if(v.equals(bt)){
-
-            Intent intent = new Intent(Userprofile.this,Homepage.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-
-
-
-        }
-*/
-
 
     }
 }

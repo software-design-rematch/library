@@ -22,19 +22,32 @@ public class UserprofileTest {
 
 
 
-    public void BItem(){
+
+    @Test
+    public void dummyFunction() {
         try{
             runOnUiThread(() -> {
-                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
-                p.getMenuInflater().inflate(R.menu.promenu, p.getMenu());
-                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.homee);
-                activityTestRule.getActivity().Bswitch(dummyMenuItem1);
+                activityTestRule.getActivity().exEverything();
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
     }
 
+
+  /*  public void Item(){
+        try{
+            runOnUiThread(() -> {
+                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
+                p.getMenuInflater().inflate(R.menu.promenu, p.getMenu());
+                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.homaee);
+                activityTestRule.getActivity().Bswitch(dummyMenuItem1);
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+*/
 
 
 }
