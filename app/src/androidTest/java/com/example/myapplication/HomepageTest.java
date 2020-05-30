@@ -89,35 +89,8 @@ public class HomepageTest {
     }
 
 
-    @Test
-    public void Item5(){
-        try{
-            runOnUiThread(() -> {
-                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
-                p.getMenuInflater().inflate(R.menu.homepagemenu, p.getMenu());
-                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.loanbk);
-                activityTestRule.getActivity().onOptionsItemSelected(dummyMenuItem1);
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
 
 
-
-    @Test
-    public void Item6(){
-        try{
-            runOnUiThread(() -> {
-                PopupMenu p = new PopupMenu(activityTestRule.getActivity(), null);
-                p.getMenuInflater().inflate(R.menu.homepagemenu, p.getMenu());
-                MenuItem dummyMenuItem1 = p.getMenu().findItem(R.id.returnbk);
-                activityTestRule.getActivity().onOptionsItemSelected(dummyMenuItem1);
-            });
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-    }
 
 
 
