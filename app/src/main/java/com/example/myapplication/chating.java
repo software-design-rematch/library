@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 public class chating extends AppCompatActivity  implements View.OnClickListener{
 
-    String ems;
+    String ems,Remail,msge;
     Button bt,sendM;
     EditText aa,ba;
     @Override
@@ -37,13 +37,73 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
         sendM.setOnClickListener(this);
 
 
+        exEVERYTHING();
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
+        if(v.equals(bt)){
+
+            Intent intent = new Intent(chating.this,Homepage.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+        }
+
+        if(v.equals(sendM)){
+
+            Tinput();
+
+            if(vverifier(Remail,msge) == true){
+
+                handlemsg();
+            }
+        }
+
+    }
+
+    public  boolean vverifier(String a, String b){
+        boolean st= true;
+
+        if(a.equals("")){
+            aa.setError("receiver email cannot be empty");
+            st=false;
+        }
+
+        if(b.equals("")){
+            ba.setError("please tyoe in a message");
+            st= false;
+        }
+
+        return st;
+
+    }
+
+    public  void Tinput(){
+
+        Remail=aa.getText().toString().trim();
+        msge=ba.getText().toString().trim();
+
+    }
 
 
 
+    public void handlemsg(){
 
+        String type ="reg";
+        Backchating backgroundTask = new Backchating(getApplicationContext(),"");
+        backgroundTask.execute(type,ems,Remail,msge);
 
+        aa.setText("");
+        Intent intent = new Intent(chating.this,Homepage.class);
+        intent.putExtra("email",ems);
+        startActivity(intent);
 
+    }
 
+    public  void exEVERYTHING(){
 
         final TextView t = (TextView)findViewById(R.id.displaychats);
         ContentValues params = new ContentValues();
@@ -86,62 +146,6 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
             }
         };
         asyncHTTPPost.execute();
-
-
-
-
-
-
-    }
-
-
-
-    public  boolean verifyinput(String a,String b){
-        boolean st= true;
-
-        if(a.equals("")){
-            aa.setError("receiver email cannot be empty");
-            st=false;
-        }
-
-        if(b.equals("")){
-            ba.setError("please tyoe in a message");
-            st= false;
-        }
-
-    return st;
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        if(v.equals(bt)){
-
-            Intent intent = new Intent(chating.this,Homepage.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-        }
-
-        if(v.equals(sendM)){
-
-            String Remail =aa.getText().toString().trim();
-            String msge=ba.getText().toString().trim();
-
-            if(verifyinput(Remail,msge) == true){
-
-                String type ="reg";
-                Backchating backgroundTask = new Backchating(getApplicationContext(),"");
-                backgroundTask.execute(type,ems,Remail,msge);
-
-                aa.setText("");
-                Intent intent = new Intent(chating.this,Homepage.class);
-                intent.putExtra("email",ems);
-                startActivity(intent);
-
-            }
-
-        }
 
 
 
