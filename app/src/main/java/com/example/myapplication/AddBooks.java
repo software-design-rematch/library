@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class AddBooks extends AppCompatActivity implements View.OnClickListener {
 
     Bundle b;
-    String emss="",e;
+    String emss="",e,namebook,nameSHELF,nameAUTHOR;
     String srcc="";
     TextView isbnd;
     private static  String res="ggg";
@@ -42,29 +42,8 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
         p=(Button)findViewById(R.id.dp);
         sc =(Button)findViewById(R.id.scancode);
 
-
-
-        //here for scan
-         //Intent intent =getIntent();
-        //srcc =intent.getStringExtra("ISBN");
-
-
-
-
         Intent intent1 =getIntent();
         emss =intent1.getStringExtra("email");
-
-
-
-
-
-        //here for scans
-        //Intent intent2 =getIntent();
-        //e=intent2.getStringExtra("emaial");
-
-
-
-
 
 
         //b = intent.getExtras();
@@ -106,107 +85,92 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
         if (view.equals(nxt)) {
 
             //String bookcode = srcc;
-            String namebook = nameofbook.getText().toString();
-            String nameSHELF = shelfname.getText().toString();
-            String nameAUTHOR = authorname.getText().toString();
 
-
-
-
-            boolean stated = true;
-
-
-            //here for scan
+      //here for scan
             /*if (srcc.equals("")) {
                 isbnd.setError("scan isbn code");
                 stated = false;
             }*/
 
+            takeINS();
 
-            if (namebook.equals("")) {
-                nameofbook.setError("book name and ISBN can not be empty");
-                stated = false;
-            }
-            if (nameSHELF.equals("")) {
-                stated = false;
-                shelfname.setError("book location can not be empty");
-            }
-            if (nameAUTHOR.equals("")) {
-                stated = false;
-                authorname.setError("author name can not be empty");
+             if (verINs(namebook,nameSHELF,nameAUTHOR) == true) {
 
-            } else if (stated == true) {
-
-
-                String bookcodeandisbn[] =namebook.split(",");
-
-                String bookksname =bookcodeandisbn[0];
-                String ISBNCODEFINAL=bookcodeandisbn[1];
-
-                if(ISBNCODEFINAL.equals("")) {ISBNCODEFINAL = fttt;}
-
-
-                String type = "reg";
-                bookinfobackground backgroundTask = new bookinfobackground(getApplicationContext(),"");
-                //ND ,if you scan,remove emss by e
-                backgroundTask.execute(type, ISBNCODEFINAL, bookksname, nameAUTHOR, nameSHELF,emss);
-                nameofbook.setText("");
-                shelfname.setText("");
-                authorname.setText("");
-
-
-
-                //scans here.....
-                //isbnd.setText("");
-
-
-
-
-
-                Intent intent = new Intent(AddBooks.this,Homepage.class);
-                //ND ,if you scan,remove emss by e
-                intent.putExtra("email",emss);
-                startActivity(intent);
-
+                 exxEVER();
 
             }
 
 
         }
 
+    }
 
 
-        if(view.equals(p)){
 
 
-            Intent intent =getIntent();
-            srcc =intent.getStringExtra("ISBN");
 
-        isbnd.setText(srcc);
+    public void takeINS(){
 
+        namebook = nameofbook.getText().toString();
+        nameSHELF = shelfname.getText().toString();
+        nameAUTHOR = authorname.getText().toString();
+
+
+    }
+
+
+    public boolean verINs(String a,String b,String c){
+
+        boolean stated= true;
+        if (a.equals("")) {
+            nameofbook.setError("book name and ISBN can not be empty");
+            stated = false;
+        }
+        if (b.equals("")) {
+            stated = false;
+            shelfname.setError("book location can not be empty");
+        }
+        if (c.equals("")) {
+            stated = false;
+            authorname.setError("author name can not be empty");
 
         }
 
 
 
+        return  stated;
+    }
 
 
 
 
-            /*if (b != null) {
-                if (view.equals(p)) {
-                    //String k="";
-                    //Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-
-                    String j = (String) b.get("ISBN");
-                    code = j;
-
-                    isbnd.setText(code);
-                    //Intent intent = new Intent(AddBooks.this,Homepage.class);
-                    //startActivity(intent);
-                }
-            }*/
+    public  void exxEVER(){
 
 
+        String bookcodeandisbn[] =namebook.split(",");
 
-    }}
+        String bookksname =bookcodeandisbn[0];
+        String ISBNCODEFINAL=bookcodeandisbn[1];
+
+        if(ISBNCODEFINAL.equals("")) {ISBNCODEFINAL = fttt;}
+
+
+        String type = "reg";
+        bookinfobackground backgroundTask = new bookinfobackground(getApplicationContext(),"");
+        //ND ,if you scan,remove emss by e
+        backgroundTask.execute(type, ISBNCODEFINAL, bookksname, nameAUTHOR, nameSHELF,emss);
+        nameofbook.setText("");
+        shelfname.setText("");
+        authorname.setText("");
+
+
+        Intent intent = new Intent(AddBooks.this,Homepage.class);
+        //ND ,if you scan,remove emss by e
+        intent.putExtra("email",emss);
+        startActivity(intent);
+
+    }
+
+
+
+}
