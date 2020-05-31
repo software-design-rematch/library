@@ -15,11 +15,53 @@ public class WishlistTest {
 
 
     @Rule
-    public ActivityTestRule<Userprofile> activityTestRule = new ActivityTestRule<>(Userprofile.class);
+    public ActivityTestRule<Wishlist> activityTestRule = new ActivityTestRule<>(Wishlist.class);
+
+
 
 
     @Test
-    public void logingpback(){
+    public void dummyFunctionWithParams(){
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().vverifyinput("cassius","surname");
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+    @Test
+    public void EXcuteEVERything(){
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().exEVER();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+
+    @Test
+    public void takeINPUT(){
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().takinginputtt();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+    @Test
+    public void homeback(){
         try {
             runOnUiThread(() -> {
                 activityTestRule.getActivity().findViewById(R.id.back).performClick();
@@ -30,16 +72,19 @@ public class WishlistTest {
     }
 
 
+
     @Test
-    public void logingpbgack(){
+    public void stayW(){
         try {
             runOnUiThread(() -> {
-                activityTestRule.getActivity().findViewById(R.id.sendmessage).performClick();
+                activityTestRule.getActivity().findViewById(R.id.add).performClick();
             });
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
     }
+
+
 
 
 }

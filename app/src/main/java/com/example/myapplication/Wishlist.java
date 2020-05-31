@@ -16,9 +16,11 @@ import org.json.JSONObject;
 
 public class Wishlist extends AppCompatActivity implements View.OnClickListener {
 
+
+
     Button bt,ad;
     EditText b,a;
-    String ems;
+    String ems,w,ww;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +41,60 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
 
 
 
+        exEVER();
+    }
+
+    @Override
+    public void onClick(View v) {
+
+
+        if(v.equals(bt)){
+            Intent intent = new Intent(Wishlist.this,Homepage.class);
+            intent.putExtra("email",ems);
+            startActivity(intent);
+
+        }
+        if(v.equals(ad)){
+
+
+
+            takinginputtt();
+
+
+            if(vverifyinput(w,ww)==true){
+
+
+
+                String type = "reg";
+                Backwish backgroundTask = new Backwish(getApplicationContext(),"");
+
+                backgroundTask.execute(type,ems,w,ww);
+
+
+                Intent intent = new Intent(Wishlist.this,Homepage.class);
+                intent.putExtra("email",ems);
+                startActivity(intent);
 
 
 
 
 
 
+            }
 
 
 
+
+        }
+
+
+    }
+
+
+
+
+
+    public void exEVER(){
 
 
 
@@ -95,79 +142,10 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-
-        if(v.equals(bt)){
-            Intent intent = new Intent(Wishlist.this,Homepage.class);
-            intent.putExtra("email",ems);
-            startActivity(intent);
-
-        }
-        if(v.equals(ad)){
-
-            String  w =a.getText().toString().trim();
-            String ww =b.getText().toString().trim();
-
-
-
-            if(verifyinput(w,ww)==true){
-
-
-
-                String type = "reg";
-                Backwish backgroundTask = new Backwish(getApplicationContext(),"");
-
-                backgroundTask.execute(type,ems,w,ww);
-
-
-                Intent intent = new Intent(Wishlist.this,Homepage.class);
-                intent.putExtra("email",ems);
-                startActivity(intent);
-
-
-
-
-
-
-            }
-
-
-
-
-        }
-
-
     }
 
 
-
-    public  boolean verifyinput(String aa,String bb){
+   public  boolean vverifyinput(String aa,String bb){
 
 
 
@@ -186,5 +164,14 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+
+
+    public void takinginputtt(){
+
+
+        w =a.getText().toString().trim();
+        ww =b.getText().toString().trim();
+
+    }
 
 }
