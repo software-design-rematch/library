@@ -71,26 +71,8 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
 
 
 
-
-        if (view.equals(sc)) {
-
-            Intent intent = new Intent(AddBooks.this, Scans.class);
-            intent.putExtra("email",emss);
-            startActivity(intent);
-
-
-        }
-
-
         if (view.equals(nxt)) {
 
-            //String bookcode = srcc;
-
-      //here for scan
-            /*if (srcc.equals("")) {
-                isbnd.setError("scan isbn code");
-                stated = false;
-            }*/
 
             takeINS();
 
