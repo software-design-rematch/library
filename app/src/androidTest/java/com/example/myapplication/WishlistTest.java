@@ -19,6 +19,22 @@ public class WishlistTest {
 
 
 
+    @Test
+    public void msgTEST(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.add).performClick();
+                activityTestRule.getActivity().a.setText("cassius123");
+                activityTestRule.getActivity().b.setText("wrong pass");
+                activityTestRule.getActivity().findViewById(R.id.add).performClick();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
 
     @Test
     public void dummyFunctionWithParams(){

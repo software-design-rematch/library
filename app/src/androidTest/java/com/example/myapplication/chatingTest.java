@@ -19,6 +19,37 @@ public class chatingTest {
 
 
     @Test
+    public void sendTESTmsgEMPTY(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.sendmessage).performClick();
+                activityTestRule.getActivity().aa.setText("cassius123");
+                activityTestRule.getActivity().ba.setText("wrong pass");
+                activityTestRule.getActivity().findViewById(R.id.sendmessage).performClick();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+    @Test
+    public void EeMPTY(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.back).performClick();
+
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
+
+
+    @Test
     public void dummyFunctionWithParams(){
         try{
             runOnUiThread(() -> {
