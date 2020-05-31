@@ -134,19 +134,9 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
             String  w =a.getText().toString().trim();
             String ww =b.getText().toString().trim();
 
-            boolean st=true;
-            if(w.equals("")){
-                a.setError("please fill in here");
-                st=false;
-            }
-
-            if(ww.equals("")){
-                b.setError("time and date can not be empty");
-                st = false;
-            }
 
 
-            else if(st==true){
+            if(verifyinput(w,ww)==true){
 
 
 
@@ -174,4 +164,27 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
 
 
     }
+
+
+
+    public  boolean verifyinput(String aa,String bb){
+
+
+
+        boolean st=true;
+        if(aa.equals("")){
+            a.setError("please fill in here");
+            st=false;
+        }
+
+        if(bb.equals("")){
+            b.setError("time and date can not be empty");
+            st = false;
+        }
+
+        return st;
+
+    }
+
+
 }

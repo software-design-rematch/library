@@ -97,10 +97,10 @@ public class searchbooksss extends AppCompatActivity implements View.OnClickList
 
                             TextView inforBOOKS=(TextView) findViewById(R.id.displayinfo);
                             String pr="";
-                            /*for(int i =0;i<Arr1.length;i++){
+                            for(int i =0;i<Arr1.length;i++){
                                 pr += Arr1[i]+"\n";
 
-                            }*/
+                            }
                              if(pr.equals("")){
                                  inforBOOKS.setText("book not found");
                              }

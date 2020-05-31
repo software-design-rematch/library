@@ -30,4 +30,16 @@ public class WishlistTest {
     }
 
 
+    @Test
+    public void logingpbgack(){
+        try {
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().findViewById(R.id.sendmessage).performClick();
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+
 }
