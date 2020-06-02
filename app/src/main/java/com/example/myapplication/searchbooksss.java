@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 public class searchbooksss extends AppCompatActivity implements View.OnClickListener{
 
-    String ems;
+    String ems,nora;
     Button seT,baT;
     TextView inforBOOKS;
     EditText bookNAMEAUTHOR;
@@ -55,74 +55,10 @@ public class searchbooksss extends AppCompatActivity implements View.OnClickList
         if(v.equals(seT))
         {
 
-            String nora = bookNAMEAUTHOR.getText().toString().trim();
-            int tstng = 1;
+            takeINN();
+            if(testI(nora)==true){
 
-            if(nora.equals("")){
-                bookNAMEAUTHOR.setError("book name or author ca not be empty");
-                tstng = 0;
-                               }
-
-            else if(tstng==1){
-
-                        //do search
-
-                String ad="http://192.168.43.68/searchbook.php";
-                ContentValues params= new ContentValues();
-                params.put("searchkey",nora);
-
-                AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost(ad,params) {
-                    @Override
-                    protected void onPostExecute(String output) {
-
-                        JSONArray T = null;
-
-                        try{
-
-
-                            T = new JSONArray(output);
-                            int aa= T.length();
-                            String Arr1[] = new String[aa];
-
-                            for(int i=0;i<T.length();i++){
-                                String some="";
-                                JSONObject Aw =(JSONObject)T.get(i);
-
-                                some = "book code   :  " +Aw.get("isbn")+"\n"+"\n"+"\n"+"book name   :  "+Aw.get("bookname")+"\n"+"\n"+"\n"+
-                                        "author name :  "+Aw.get("author")+"\n"+"\n"+"\n"+"book location  :"+Aw.get("location")+"\n"+"\n"+"\n";
-                                Arr1[i] =some;
-
-                            }
-
-
-                            TextView inforBOOKS=(TextView) findViewById(R.id.displayinfo);
-                            String pr="";
-                            for(int i =0;i<Arr1.length;i++){
-                                pr += Arr1[i]+"\n";
-
-                            }
-                             if(pr.equals("")){
-                                 inforBOOKS.setText("book not found");
-                             }
-                         else {   inforBOOKS.setText(pr);}
-
-                        }
-                        catch (JSONException k){
-
-                            k.printStackTrace();
-                        }
-
-
-
-
-
-
-                    }
-                };
-
-                asyncHTTPPost.execute();
-
-
+                            stEVER();
 
                              }
 
@@ -133,4 +69,97 @@ public class searchbooksss extends AppCompatActivity implements View.OnClickList
 
 
     }
+
+
+    public void stEVER(){
+
+
+        //do search
+
+        String ad="http://192.168.43.68/searchbook.php";
+        ContentValues params= new ContentValues();
+        params.put("searchkey",nora);
+
+        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost(ad,params) {
+            @Override
+            protected void onPostExecute(String output) {
+
+                JSONArray T = null;
+
+                try{
+
+
+                    T = new JSONArray(output);
+                    int aa= T.length();
+                    String Arr1[] = new String[aa];
+
+                    for(int i=0;i<T.length();i++){
+                        String some="";
+                        JSONObject Aw =(JSONObject)T.get(i);
+
+                        some = "book code   :  " +Aw.get("isbn")+"\n"+"\n"+"\n"+"book name   :  "+Aw.get("bookname")+"\n"+"\n"+"\n"+
+                                "author name :  "+Aw.get("author")+"\n"+"\n"+"\n"+"book location  :"+Aw.get("location")+"\n"+"\n"+"\n";
+                        Arr1[i] =some;
+
+                    }
+
+
+                    TextView inforBOOKS=(TextView) findViewById(R.id.displayinfo);
+                    String pr="";
+                    for(int i =0;i<Arr1.length;i++){
+                        pr += Arr1[i]+"\n";
+
+                    }
+                    if(pr.equals("")){
+                        inforBOOKS.setText("book not found");
+                    }
+                    else {   inforBOOKS.setText(pr);}
+
+                }
+                catch (JSONException k){
+
+                    k.printStackTrace();
+                }
+
+
+
+
+
+
+            }
+        };
+
+        asyncHTTPPost.execute();
+
+
+
+
+    }
+
+
+
+
+
+
+
+    public void takeINN(){
+        nora = bookNAMEAUTHOR.getText().toString().trim();
+
+    }
+
+
+    public  boolean testI(String a){
+        boolean st =true;
+        if(a.equals("")){
+            bookNAMEAUTHOR.setError("book name or author ca not be empty");
+            st = false;
+        }
+
+        return st;
+    }
+
+
+
+
+
 }
