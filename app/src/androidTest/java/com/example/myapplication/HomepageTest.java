@@ -25,6 +25,26 @@ public class HomepageTest {
 
 
 
+    @Test
+    public void onCreate() {
+
+
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().onCreate(new Bundle());
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+
+
+
+
+    }
+
+
+
 
     @Test
     public void Item1(){

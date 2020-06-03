@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
@@ -16,6 +18,26 @@ public class WishlistTest {
 
     @Rule
     public ActivityTestRule<Wishlist> activityTestRule = new ActivityTestRule<>(Wishlist.class);
+
+
+    @Test
+    public void onCreate() {
+
+
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().onCreate(new Bundle());
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+
+
+
+
+    }
+
 
 
 

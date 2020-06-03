@@ -25,6 +25,25 @@ public class LoginTest {
 
 
 
+    @Test
+    public void onCreate() {
+
+
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().onCreate(new Bundle());
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+
+
+
+
+    }
+
+
 
 
 

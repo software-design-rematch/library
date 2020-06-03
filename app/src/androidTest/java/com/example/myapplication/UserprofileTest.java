@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
 
@@ -19,6 +20,27 @@ public class UserprofileTest {
 
     @Rule
     public ActivityTestRule<Userprofile> activityTestRule = new ActivityTestRule<>(Userprofile.class);
+
+
+
+
+    @Test
+    public void onCreate() {
+
+
+        try{
+            runOnUiThread(() -> {
+                activityTestRule.getActivity().onCreate(new Bundle());
+            });
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+
+
+
+
+    }
 
 
 
