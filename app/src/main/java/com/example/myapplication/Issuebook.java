@@ -13,7 +13,7 @@ import java.util.Calendar;
 
 public class Issuebook extends AppCompatActivity implements View.OnClickListener {
     EditText a;
-    String ems;
+    String ems,isbnnn;
     Button isBk,bk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,41 +45,16 @@ public class Issuebook extends AppCompatActivity implements View.OnClickListener
 
         if(v.equals(isBk)){
 
-            String isbnnn=a.getText().toString().trim();
 
-            boolean state = true;
-
-            if(isbnnn.equals("")){
-                a.setError("please type in book code");
-                state = false;
-            }
-
-            else if(state == true){
+            taIN();
 
 
-
-                String  mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-
-                String type ="reg";
-                Backloanbook backgroundTask = new Backloanbook(getApplicationContext(),"");
-                backgroundTask.execute(type, ems, isbnnn , "taken",mydate);
-
-                a.setText("");
-                Intent intent = new Intent(Issuebook.this,Homepage.class);
-                intent.putExtra("email",ems);
-                startActivity(intent);
+            if(issueT(isbnnn) == true){
 
 
-
-
-
+                testIS();
 
                 //check if book exist and is free then add it to issue book database;
-
-
-
-
-
 
 
             }
@@ -99,4 +74,63 @@ public class Issuebook extends AppCompatActivity implements View.OnClickListener
 
 
     }
+
+
+
+
+
+
+    public void testIS(){
+
+
+        String  mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+
+        String type ="reg";
+        Backloanbook backgroundTask = new Backloanbook(getApplicationContext(),"");
+        backgroundTask.execute(type, ems, isbnnn , "taken",mydate);
+
+        a.setText("");
+        Intent intent = new Intent(Issuebook.this,Homepage.class);
+        intent.putExtra("email",ems);
+        startActivity(intent);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+    public  void taIN(){
+        isbnnn=a.getText().toString().trim();
+    }
+
+
+
+
+    public  boolean issueT(String aa){
+
+
+        boolean state = true;
+
+        if(aa.equals("")){
+            a.setError("please type in book code");
+            state = false;
+        }
+
+        return  state;
+    }
+
+
+
+
+
+
+
 }

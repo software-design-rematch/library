@@ -8,25 +8,11 @@
     tools:context=".rreturnbooks">
 
 
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:id="@+id/cov"
-        android:background="@drawable/return1"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginRight="81dp"></ImageView>
+
 
     <EditText
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="260dp"
         android:id="@+id/typeISBN"
-        android:layout_below="@id/cov"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="please type in book code"
