@@ -56,16 +56,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
 
 
-
-
-
-
-
-
-
-
-
-
         Intent intent =getIntent();
         ems =intent.getStringExtra("email");
 
