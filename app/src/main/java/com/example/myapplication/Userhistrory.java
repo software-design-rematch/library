@@ -33,8 +33,6 @@ public class Userhistrory extends AppCompatActivity implements View.OnClickListe
         bt.setOnClickListener(this);
 
 
-
-
         final TextView t = (TextView)findViewById(R.id.displayinfo);
         ContentValues params = new ContentValues();
         params.put("email",ems);
@@ -75,9 +73,6 @@ public class Userhistrory extends AppCompatActivity implements View.OnClickListe
             }
         };
         asyncHTTPPost.execute();
-
-
-
 
 
 
