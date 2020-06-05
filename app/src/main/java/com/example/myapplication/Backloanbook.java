@@ -24,9 +24,6 @@ public class Backloanbook extends AsyncTask<String, String, String> {
         this.retx = sa;
     }
 
-
-
-
     @Override
 
     protected String doInBackground(String... strings) {
@@ -95,9 +92,6 @@ public class Backloanbook extends AsyncTask<String, String, String> {
 
         ///Toast.makeText(context.getApplicationContext(),s,Toast.LENGTH_SHORT).show();
     }
-
-
-
 
 
 
