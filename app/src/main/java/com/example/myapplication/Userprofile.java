@@ -37,9 +37,6 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
 
 
 
-
-
-
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottomprofile);
 
 
