@@ -14,8 +14,9 @@
         android:hint="first name(s)"
         android:inputType="text"
         android:drawableLeft="@drawable/ic_name"
-
-        android:textSize="20dp"></EditText>
+        android:textSize="20dp">
+    
+    </EditText>
 
     <EditText
         android:id="@+id/surname"
@@ -37,7 +38,9 @@
         android:hint="email address"
         android:drawableLeft="@drawable/ic_email"
         android:inputType="textEmailAddress"
-        android:textSize="20dp"></EditText>
+        android:textSize="20dp">
+    
+    </EditText>
 
 
     <EditText
