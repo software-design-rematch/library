@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-
     <ImageView
         android:id="@+id/im"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_alignParentStart="true"
 
+   
 
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -25,7 +25,9 @@
         android:layout_marginTop="19dp"
         android:layout_marginEnd="67dp"
         android:layout_marginRight="67dp"
-        android:background="@drawable/m6"></ImageView>
+        android:background="@drawable/m6">
+    </ImageView>
+
 
     <EditText
         android:id="@+id/email"
@@ -68,7 +70,8 @@
         android:hint=" password...."
         android:inputType="textPassword"
         android:password="true"
-        android:textColor="@color/black"></EditText>
+        android:textColor="@color/black">
+    </EditText>
 
 
     <TextView
@@ -113,7 +116,8 @@
         android:gravity="center_horizontal"
         android:text="create new account"
         android:textAlignment="center"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp">
+    </TextView>
 
 
 </RelativeLayout>
