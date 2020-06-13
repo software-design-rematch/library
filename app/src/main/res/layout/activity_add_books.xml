@@ -48,7 +48,8 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_toLeftOf="@+id/isbn"
-        tools:ignore="UnknownId"></TextView>
+        tools:ignore="UnknownId">
+    </TextView>
 
 
     <Button
@@ -67,7 +68,8 @@
         android:layout_marginRight="62dp"
         android:background="@color/white"
         android:text="confirm isbn code"
-        android:textColor="@color/black"></Button>
+        android:textColor="@color/black">
+    </Button>
 
 
     <EditText
