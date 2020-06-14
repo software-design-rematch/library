@@ -80,8 +80,8 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = " "+"first names  :  "+Aw.get("name")+"\n"+"\n"+"\n"+"\n"+"  "+"surname  :  "+" "+Aw.get("surname")+"\n"+"\n"+"\n"+"\n"+"  "
-                                +" "+"email  :  "+" "+Aw.get("email") +"\n"+"\n"+"\n"+"\n"+"  "+"gender  : "+Aw.get("gender")+"\n"+"\n"+"\n"+"\n";
+                        some = " "+"first names  :  "+Aw.get("name")+"\n"+"\n"+"\n"+"  "+"surname     :  "+" "+Aw.get("surname")+"\n"+"\n"+"\n"+"  "
+                                +" "+"email         :  "+" "+Aw.get("email") +"\n"+"\n"+"\n"+"  "+"gender       : "+Aw.get("gender")+"\n"+"\n"+"\n"+"\n";
                         Arr1[i]=some;
                     }
 

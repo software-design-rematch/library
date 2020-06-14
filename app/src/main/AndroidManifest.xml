@@ -14,7 +14,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Wishlist"></activity>
         <activity android:name=".chating" />
-        <activity android:name=".Userhistrory" />
         <activity android:name=".Userprofile" />
         <activity android:name=".rreturnbooks" />
         <activity android:name=".Issuebook" />

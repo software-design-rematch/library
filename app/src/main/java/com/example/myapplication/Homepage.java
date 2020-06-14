@@ -88,13 +88,13 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = " "+"email  :  "+" "+Aw.get("email")+" "+"\n"+"\n"+"book code  :  "+Aw.get("isbn")+"\n"+"\n"+"  "+"time  :  "+" "+Aw.get("returntime")+"\n"+"\n";
+                        some = "book code       :  "+Aw.get("isbn")+"\n"+"\n"+"returned date  :  "+" "+Aw.get("returntime")+"\n"+"\n"+"\n"+"  ";
                         Arr1[i]=some;
                     }
 
                     String fn="";
 
-                    for(int i=0;i<Arr1.length;i++){
+                    for(int i=Arr1.length-1;i>=0;i--){
 
                         fn = fn + Arr1[i]+"\n";
                     }

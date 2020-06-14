@@ -97,8 +97,8 @@ public class searchbooksss extends AppCompatActivity implements View.OnClickList
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = "book code   :  " +Aw.get("isbn")+"\n"+"\n"+"\n"+"book name   :  "+Aw.get("bookname")+"\n"+"\n"+"\n"+
-                                "author name :  "+Aw.get("author")+"\n"+"\n"+"\n"+"book location  :"+Aw.get("location")+"\n"+"\n"+"\n";
+                        some = "book code       :  " +Aw.get("isbn")+"\n"+"\n"+"book name      :  "+Aw.get("bookname")+"\n"+"\n"+
+                                "author name   :  "+Aw.get("author")+"\n"+"\n"+"book location  : "+Aw.get("location")+"\n"+"\n"+"\n";
                         Arr1[i] =some;
 
                     }

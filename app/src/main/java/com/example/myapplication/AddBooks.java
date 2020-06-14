@@ -135,8 +135,6 @@ public class AddBooks extends AppCompatActivity implements View.OnClickListener 
         String ISBNCODEFINAL=bookcodeandisbn[1];
 
         if(ISBNCODEFINAL.equals("")) {ISBNCODEFINAL = fttt;}
-
-
         String type = "reg";
         bookinfobackground backgroundTask = new bookinfobackground(getApplicationContext(),"");
         //ND ,if you scan,remove emss by e

@@ -124,14 +124,13 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = " "+"email  :  "+Aw.get("semail")+"\n"+"\n"+"\n"+"\n"+"  "+"msg  :  "+" "+Aw.get("msg")+"\n"+"\n"+"\n"+"\n"+"  "
-                                +" "+"sent to  :  "+" "+Aw.get("remail") ;
+                        some = " "+"email     :  "+Aw.get("semail")+"\n"+"\n"+"  "+"msg      :  "+" "+Aw.get("msg")+"\n"+"\n"+"  "+"sent to  :  "+" "+Aw.get("remail")+"\n"+"\n"+"\n"+"\n"+"  " ;
                         Arr1[i]=some;
                     }
 
                     String fn="";
 
-                    for(int i=0;i<Arr1.length;i++){
+                    for(int i=Arr1.length-1;i>=0;i--){
 
                         fn = fn + Arr1[i]+"\n";
                     }
