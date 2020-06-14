@@ -32,7 +32,7 @@ public class Backwish  extends AsyncTask<String, String, String> {
         String email = strings[1];
         String wish = strings[2];
         String time = strings[3];
-        String regURL = "http://192.168.43.68/addwish.php";
+        String regURL = "http://10.100.15.37/addwish.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);
