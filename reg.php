@@ -1,6 +1,6 @@
 <?php
 
-$servername ="192.168.43.68";
+$servername ="ipaddress";
 $user ="root";
 $pass="";
 $dbname="project";
