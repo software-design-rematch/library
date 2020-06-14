@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Wishlist"></activity>
+        <activity android:name=".Rateuser"></activity>
+        <activity android:name=".Ratebook" />
+        <activity android:name=".Wishlist" />
         <activity android:name=".chating" />
         <activity android:name=".Userprofile" />
         <activity android:name=".rreturnbooks" />

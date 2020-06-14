@@ -236,6 +236,19 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(intent7);
                 return true;
 
+            case  R.id.ratebooook:
+                Intent intent8 = new Intent(Homepage.this,Ratebook.class);
+                intent8.putExtra("email",ems);
+                startActivity(intent8);
+                return true;
+
+
+            case  R.id.rateusssser:
+                Intent intent9 = new Intent(Homepage.this,Rateuser.class);
+                intent9.putExtra("email",ems);
+                startActivity(intent9);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 
