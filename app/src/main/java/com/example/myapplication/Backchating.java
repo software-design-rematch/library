@@ -35,7 +35,7 @@ public class Backchating extends AsyncTask<String, String, String> {
         String semail = strings[1];
         String remail = strings[2];
         String msg = strings[3];
-        String regURL = "http://192.168.43.68/chating.php";
+        String regURL = "http://10.100.15.37/chating.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);

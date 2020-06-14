@@ -65,7 +65,7 @@ public class Userprofile extends AppCompatActivity implements View.OnClickListen
         ContentValues params = new ContentValues();
         params.put("email",ems);
 
-        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://192.168.43.68/userinfo.php",params) {
+        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://10.100.15.37/userinfo.php",params) {
             @Override
             protected void onPostExecute(String output) {
 

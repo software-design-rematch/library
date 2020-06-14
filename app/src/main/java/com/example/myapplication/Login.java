@@ -65,7 +65,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 Intent Home = new Intent(Login.this, Homepage.class);
                 Home.putExtra("email", ems);
                 startActivity(Home);} else if (verifyinput(ems,pas) == 1) {
-                String adress = "http://192.168.43.68/login.php";
+                String adress = "http://10.100.15.37/login.php";
                 ContentValues Content = new ContentValues();
                 Content.put("email", ems);
                 Content.put("password", pas);
