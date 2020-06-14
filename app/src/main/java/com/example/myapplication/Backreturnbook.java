@@ -34,7 +34,7 @@ public class Backreturnbook extends AsyncTask<String, String, String> {
         String isbn = strings[2];
         String email =strings[1];
         String returntime=strings[3];
-        String regURL = "http://192.168.43.68/returnbook.php";
+        String regURL = "http://10.100.15.37/returnbook.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);
