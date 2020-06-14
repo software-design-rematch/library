@@ -109,7 +109,7 @@ public class chating extends AppCompatActivity  implements View.OnClickListener{
         ContentValues params = new ContentValues();
         params.put("email",ems);
 
-        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://192.168.43.68/chats.php",params) {
+        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://10.100.15.37/chats.php",params) {
             @Override
             protected void onPostExecute(String output) {
 

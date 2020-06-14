@@ -37,7 +37,7 @@ public class bookinfobackground extends AsyncTask<String, String, String> {
         String author = strings[3];
         String location = strings[4];
         String email = strings[5];
-        String regURL = "http://192.168.43.68/addbook.php";
+        String regURL = "http://10.100.15.37/addbook.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);

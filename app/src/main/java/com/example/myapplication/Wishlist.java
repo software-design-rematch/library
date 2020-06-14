@@ -103,7 +103,7 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
         ContentValues params = new ContentValues();
         params.put("email",ems);
 
-        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://192.168.43.68/wih.php",params) {
+        AsyncHTTPPost asyncHTTPPost = new AsyncHTTPPost("http://10.100.15.37/wish.php",params) {
             @Override
             protected void onPostExecute(String output) {
 
