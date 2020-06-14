@@ -33,7 +33,7 @@ public class Backdeletebook extends AsyncTask<String, String, String> {
         String type = strings[0];
         String ISBN = strings[1];
 
-        String regURL = "http://192.168.43.68/deletebook.php";
+        String regURL = "http://10.100.15.37/deletebook.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);

@@ -33,7 +33,7 @@ public class Backloanbook extends AsyncTask<String, String, String> {
         String bookstatus = strings[3];
         String loantime = strings[4];
 
-        String regURL = "http://192.168.43.68/loanbook.php";
+        String regURL = "http://10.100.15.37/loanbook.php";
         if (type.equals("reg")) {
             try {
                 URL url = new URL(regURL);
