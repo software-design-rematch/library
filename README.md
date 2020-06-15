@@ -1,4 +1,4 @@
-# WitsSRC App
+# LIBRARY MANAGEMENT SYSTEM
  
 This is an app for Library Management System.
 Through this app, users can perform most of the thing that happens in the library like loan books,return books etc
