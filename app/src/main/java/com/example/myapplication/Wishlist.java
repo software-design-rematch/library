@@ -118,7 +118,7 @@ public class Wishlist extends AppCompatActivity implements View.OnClickListener 
                         String some="";
                         JSONObject Aw =(JSONObject)T.get(i);
 
-                        some = " "+"wish  :  "+Aw.get("wish")+"\n"+"\n"+"\n"+"\n"+"  "+"time  :  "+" "+Aw.get("time")+"\n"+"\n"+"\n"+"\n";
+                        some = "wish           :  "+Aw.get("wish")+"\n"+"\n"+"date/time  :  "+" "+Aw.get("time")+"\n"+"\n"+"\n"+"\n";
                         Arr1[i]=some;
                     }
 
